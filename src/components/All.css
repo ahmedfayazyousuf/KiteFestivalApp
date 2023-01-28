@@ -1,0 +1,67 @@
+body, html{
+    background-image: url("desktop2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100vh;
+}
+html{
+    overflow-y: scroll;
+}
+
+@font-face{
+    font-family: myFont;
+    src:url(NissanBrand-Bold.ttf);
+}
+ .explore{
+    font-family: myFont;
+}
+
+
+@font-face{
+    font-family: myFint;
+    src:url(NissanBrand-Light.ttf);
+}
+h1, p, a, .std{
+    font-family: myFint;
+}
+.std{
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+.datediv{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    letter-spacing: 5px;
+    font-size: 27px;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+@font-face{
+    font-family: myFant;
+    src:url(NissanBrand-Regular.ttf);
+}
+h1, p, a, label, input, button, value{
+    font-family: myFant;
+}
+
+.grab {
+    cursor: -webkit-grab; 
+    cursor: grab;
+}
+
+@media only screen and (max-width: 600px) {
+    .slotparent{
+        flex-direction: row;
+    }
+    .slotdiv{
+        flex-direction: column;
+    }
+    .rower{
+        flex-direction: column;
+    }
+}

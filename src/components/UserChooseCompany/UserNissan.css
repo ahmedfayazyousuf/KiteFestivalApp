@@ -1,0 +1,107 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  /* background-image: url("./desktop2.png"); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+
+.cards{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.cards h1{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.services{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 300px;
+  /* min-width: 300px; */
+  /* max-height: 200px;
+  min-height: 200px; */
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: all .3s ease;
+  cursor: -webkit-grab; 
+  cursor: grab;
+}
+.content .fab{
+  font-size: 70px;
+  margin: 16px 0;
+}
+.content > *{
+  flex: 1 1 100%;
+}
+.content:hover{
+  color: white;
+}
+.content:hover a{
+  border-color: white;
+  background: white;
+}
+.content-1:hover{
+  border-color: rgb(200, 197, 197);
+  background: rgb(200, 197, 197);
+}
+.content-1:hover a{
+  color: rgb(200, 197, 197);
+}
+.content h2{
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.content p{
+  font-size: 17px;
+}
+.content button{
+  margin: 22px 0;
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: .3s ease;
+  
+}
+.content button:hover{
+  border-radius: 4px;
+  
+}
+@media (max-width: 900px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+body{
+  overflow-y:scroll;
+}

@@ -1,5 +1,5 @@
 import '../All.css';
-import NissanLogo from '../nissanlogo.png';
+// import NissanLogo from '../nissanlogo.png';
 import GetReady from '../getready.png';
 import ErrorImg from './404.png';
 import {Link} from 'react-router-dom'
@@ -8,9 +8,9 @@ const Error = () =>{
 
     return(
         <>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
+            {/* <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
                 <img src={NissanLogo} alt="Logo" style={{width: '20vh'}}/>
-            </div>
+            </div> */}
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px'}}/>

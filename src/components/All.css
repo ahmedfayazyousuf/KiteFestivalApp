@@ -1,16 +1,16 @@
 body, html{
-    background-image: url("desktop2.png");
+    background-image: url("desktop2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
     height: 100vh;
 }
-html{
+/* html{
     overflow-y: scroll;
-}
+} */
 
-@font-face{
+/* @font-face{
     font-family: myFont;
     src:url(NissanBrand-Bold.ttf);
 }
@@ -47,7 +47,7 @@ h1, p, a, .std{
 }
 h1, p, a, label, input, button, value{
     font-family: myFant;
-}
+} */
 
 .grab {
     cursor: -webkit-grab; 

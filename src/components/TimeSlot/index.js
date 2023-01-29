@@ -1,4 +1,4 @@
-import NissanLogo from '../nissanlogo.png';
+// import NissanLogo from '../nissanlogo.png';
 import GetReady from '../getready.png';
 import { useEffect } from "react"
 import { useState } from "react"
@@ -98,7 +98,7 @@ const TimeSlot = () => {
         node.style.fontSize = "10px";
         node.style.marginRight = "10px";
         node.innerHTML = "No Timeslots Available";
-document.getElementById(`slotparent`).appendChild(node);
+        document.getElementById(`slotparent`).appendChild(node);
         }
     })
 
@@ -142,7 +142,6 @@ document.getElementById(`slotparent`).appendChild(node);
 
             if(e === 'timeslot10_11'){
                 document.getElementById(e).style.background = "rgb(200, 197, 197)";
-      
                 document.getElementById('timeslot11_12').style.background = "transparent";
                 document.getElementById('timeslot12_13').style.background = "transparent";
                 document.getElementById('timeslot13_14').style.background = "transparent";
@@ -157,7 +156,6 @@ document.getElementById(`slotparent`).appendChild(node);
             if(e === 'timeslot11_12'){
                 document.getElementById(e).style.background = "rgb(200, 197, 197)";
                 document.getElementById('timeslot10_11').style.background = "transparent";
-      
                 document.getElementById('timeslot12_13').style.background = "transparent";
                 document.getElementById('timeslot13_14').style.background = "transparent";
                 document.getElementById('timeslot14_15').style.background = "transparent";
@@ -172,7 +170,6 @@ document.getElementById(`slotparent`).appendChild(node);
                 document.getElementById(e).style.background = "rgb(200, 197, 197)";
                 document.getElementById('timeslot10_11').style.background = "transparent";
                 document.getElementById('timeslot11_12').style.background = "transparent";
-      
                 document.getElementById('timeslot13_14').style.background = "transparent";
                 document.getElementById('timeslot14_15').style.background = "transparent";
                 document.getElementById('timeslot15_16').style.background = "transparent";
@@ -403,9 +400,9 @@ document.getElementById(`slotparent`).appendChild(node);
     
     return(
         <>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
+            {/* <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
                 <img src={NissanLogo} alt="Logo" style={{width: '20vh'}}/>
-            </div>
+            </div> */}
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px', marginBottom: '10px'}}/>

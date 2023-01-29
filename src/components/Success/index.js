@@ -1,5 +1,5 @@
 import '../All.css';
-import NissanLogo from '../nissanlogo.png';
+// import NissanLogo from '../nissanlogo.png';
 import GetReady from '../getready.png';
 import TickIcon from './tickicon.png';
 import {useLocation} from 'react-router-dom';
@@ -24,9 +24,9 @@ const Success = () =>{
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
         
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+            {/* <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={NissanLogo} alt="Logo" style={{width: '25vh', marginTop: '30px',}}/>
-            </div>
+            </div> */}
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px', marginBottom: '10px'}}/>

@@ -1,14 +1,12 @@
 import './UserNissan.css';
-import NissanLogo from '../nissanlogo.png';
+// import activityarea2Logo from '../activityarea2logo.png';
 import GetReady from '../getready.png';
-import ChooseNissan from './choosenissan.png';
-import ChooseInfiniti from './chooseinfiniti.png';
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import { useState } from 'react';
 
-const UserChooseCompany = () => { 
+const ChooseActivityArea = () => { 
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -24,30 +22,24 @@ const UserChooseCompany = () => {
 
     function carClick(e){
 
-        if(e === 'nissan'){
-            setCar('/UserNissan');
+        if(e === 'actarea1'){
+            setCar('/actarea1');
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('infiniti').style.background = "transparent";
-
+            document.getElementById('actarea2').style.background = "transparent";
         }
-
-        if (e === 'infiniti'){
-            setCar('/UserInfiniti');
+        if(e === 'actarea2'){
+            setCar('/actarea2');
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('nissan').style.background = "transparent";
+            document.getElementById('actarea1').style.background = "transparent";
         }
         
     }
-
-    // useEffect(()=>{
-    //     document.body.style.backgroundImage = `url(${process.env.PUBLIC_URL + '/desktop2.png'})` 
-    // },[])
 
     return (
         <>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
-                <img src={NissanLogo} alt="Logo" style={{width: '20vh'}}/>
+                {/* <img src={NissanLogo} alt="Logo" style={{width: '20vh'}}/> */}
             </div>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
@@ -55,7 +47,7 @@ const UserChooseCompany = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', padding: '0'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}} >Which models would you like to test drive?</p>
+                <p style={{fontSize: '15px', marginTop: '10px'}} >Choose Activity Area</p>
             </div>
 
 
@@ -65,14 +57,15 @@ const UserChooseCompany = () => {
             <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0', gap:'30px', marginTop:'10px'}} >
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
-                    <div id='nissan' className="content content-1" onClick={()=>{carClick('nissan')}} style={{padding: '0', margin: '10px'}}>
-                        <img src={ChooseNissan} alt="Logo" style={{width: '20vh'}}/>
+                    <div id='actarea1' className="content content-1" onClick={()=>{carClick('actarea1')}} style={{padding: '0', margin: '10px'}}>
+                        <p>Activity Area 1</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='infiniti' className="content content-1" onClick={()=>{carClick('infiniti')}} style={{padding: '0', margin: '10px'}}>
-                        <img src={ChooseInfiniti} alt="Logo" style={{width: '20vh'}}/>  
+                    <div id='actarea2' className="content content-1" onClick={()=>{carClick('actarea2')}} style={{padding: '0', margin: '10px'}}>
+                        {/* <img src={Chooseactivityarea2} alt="Logo" style={{width: '20vh'}}/>   */}
+                        <p>Activity Area 2</p>
                     </div>
                 </div>
 
@@ -88,5 +81,5 @@ const UserChooseCompany = () => {
     )
 }
 
-export default UserChooseCompany
+export default ChooseActivityArea
 

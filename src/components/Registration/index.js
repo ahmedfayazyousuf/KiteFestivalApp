@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import firebase from '../../firbase';
+import firebase from '../../firebase';
 import '../All.css';
 import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";

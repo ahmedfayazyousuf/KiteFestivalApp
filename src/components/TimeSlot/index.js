@@ -2,7 +2,7 @@
 import GetReady from '../getready.png';
 import { useEffect } from "react"
 import { useState } from "react"
-import firebase from '../../firbase'
+import firebase from '../../firebase'
 import "react-datepicker/dist/react-datepicker.css"
 import {useLocation} from 'react-router-dom';
 import { useParams } from "react-router-dom";
@@ -14,6 +14,7 @@ import axios from "axios";
 const TimeSlot = () => {
     const [ccount, setCcount] = useState(0);
     const [user, setUser] = useState([])
+    // eslint-disable-next-line
     const [file, setFile] = useState("");
     const location = useLocation();
     const { id } = useParams();
@@ -43,7 +44,7 @@ const TimeSlot = () => {
 
     // const data = await res.json();
     // setUser(data)
-
+        // eslint-disable-next-line
     var cccount = 0
 
 //     if(id === 'Z' || id==='Nismo370z'){
@@ -89,7 +90,7 @@ const TimeSlot = () => {
            
         }
     })
-
+    // eslint-disable-next-line
     const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslot').where("available", "==", 0).get().then((doc)=>{
         console.log(doc.size)
         if(doc.size === 8){
@@ -113,7 +114,7 @@ const TimeSlot = () => {
         count++;
         // eslint-disable-next-line
     },[])
-
+    // eslint-disable-next-line
     function popup(){
         var popup = document.getElementById("popup").style
         popup.display = "flex";
@@ -121,11 +122,12 @@ const TimeSlot = () => {
         popup.zIndex = 100;
  
      }
-
+     // eslint-disable-next-line
      function handleChange(event) {
 
         setFile(event.target.files[0]);
     }
+    // eslint-disable-next-line
     let slots = [
         { start: new Date(2022, 12,11, 13), end: new Date(2022, 12, 11, 14) }
         ]

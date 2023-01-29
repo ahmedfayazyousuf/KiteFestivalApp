@@ -1,6 +1,7 @@
 import './UserNissan.css';
 // import activityarea2Logo from '../activityarea2logo.png';
 import GetReady from '../getready.png';
+// eslint-disable-next-line
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';

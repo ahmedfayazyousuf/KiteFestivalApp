@@ -64,7 +64,6 @@ const ChooseActivityArea = () => {
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='actarea2' className="content content-1" onClick={()=>{carClick('actarea2')}} style={{padding: '0', margin: '10px'}}>
-                        {/* <img src={Chooseactivityarea2} alt="Logo" style={{width: '20vh'}}/>   */}
                         <p>Activity Area 2</p>
                     </div>
                 </div>
@@ -83,3 +82,18 @@ const ChooseActivityArea = () => {
 
 export default ChooseActivityArea
 
+
+
+
+
+// <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+//     <button className="grab" id="timeslot10_11" onClick={() => {Handleclick("timeslot10_11")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>12:30 PM</button>
+//     <button className="grab" id="timeslot11_12" onClick={() => {Handleclick("timeslot11_12")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>1:30 PM</button>
+//     <button className="grab" id="timeslot12_13" onClick={() => {Handleclick("timeslot12_13")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>2:30 PM</button>
+//     <button className="grab" id="timeslot13_14" onClick={() => {Handleclick("timeslot13_14")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>3:30 PM</button>
+//     <button className="grab" id="timeslot10_11" onClick={() => {Handleclick("timeslot10_11")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>4:30 PM</button>
+//     <button className="grab" id="timeslot11_12" onClick={() => {Handleclick("timeslot11_12")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>5:30 PM</button>
+//     <button className="grab" id="timeslot12_13" onClick={() => {Handleclick("timeslot12_13")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>6:30 PM</button>
+//     <button className="grab" id="timeslot13_14" onClick={() => {Handleclick("timeslot13_14")}} value="7:30 PM - 8:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>7:30 PM</button>
+//     <button className="grab" id="timeslot13_14" onClick={() => {Handleclick("timeslot13_14")}} value="8:30 PM - 9:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>8:30 PM</button>
+// </div>

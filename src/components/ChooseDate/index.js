@@ -14,11 +14,11 @@ const ChooseDate = () => {
 
     const [date, setDate] = useState('');
 
-    function Handleclick(v){
+    function Handleclick(){
         if(date === ''){
             return;
         }
-    navigate(v, "/ChooseActivityArea");
+    navigate(date);
     }
 
     function dateClick(e){
@@ -31,7 +31,7 @@ const ChooseDate = () => {
             document.getElementById('12feb').style.background = "transparent";
         }
         if(e === '10feb'){
-            setDate('/10feb');
+            setDate('/Date/10feb');
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
             document.getElementById('9feb').style.background = "transparent";
             document.getElementById('11feb').style.background = "transparent";
@@ -39,7 +39,7 @@ const ChooseDate = () => {
         }
 
         if(e === '11feb'){
-            setDate('/11feb');
+            setDate('/Date/11feb');
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
             document.getElementById('9feb').style.background = "transparent";
             document.getElementById('10feb').style.background = "transparent";
@@ -47,7 +47,7 @@ const ChooseDate = () => {
         }
 
         if (e === '12feb'){
-            setDate('/12feb');
+            setDate('/Date/12feb');
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
             document.getElementById('9feb').style.background = "transparent";
             document.getElementById('10feb').style.background = "transparent";
@@ -73,25 +73,25 @@ const ChooseDate = () => {
             <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0', gap:'30px', marginTop:'10px'}} >
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
-                    <div id='9feb' className="content content-1" onClick={()=>{dateClick('9feb')}} style={{padding: '0', margin: '10px'}}>
+                    <div id='9feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
                         <p>9 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='10feb' className="content content-1" onClick={()=>{dateClick('10feb')}} style={{padding: '0', margin: '10px'}}>
+                    <div id='10feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
                         <p>10 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='11feb' className="content content-1" onClick={()=>{dateClick('11feb')}} style={{padding: '0', margin: '10px'}}>
+                    <div id='11feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
                         <p>11 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='12feb' className="content content-1" onClick={()=>{dateClick('12feb')}} style={{padding: '0', margin: '10px'}}>
+                    <div id='12feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
                         <p>12 Feb</p>
                     </div>
                 </div>

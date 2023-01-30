@@ -24,8 +24,8 @@ const App = () => {
           <Route exact path="/" element={<ChooseDate />} />
           <Route path="/ChooseActivityArea" element={<ChooseActivityArea />} />
 
-          <Route path="/9feb" element={<NineFeb />} />
-          <Route path="/10feb" element={<TenFeb />} />
+          <Route path="/Date/9feb" element={<NineFeb />} />
+          <Route path="/Date/:id" element={<TenFeb />} />
           <Route path="/11feb" element={<ElevenFeb />} />
           <Route path="/12feb" element={<TwelveFeb />} />
 

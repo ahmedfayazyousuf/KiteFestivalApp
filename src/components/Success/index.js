@@ -1,7 +1,7 @@
 import '../All.css';
 // import NissanLogo from '../nissanlogo.png';
 import GetReady from '../getready.png';
-import TickIcon from './tickicon.png';
+import TickIcon from './tickicon.png';  
 
 const Success = () =>{
 

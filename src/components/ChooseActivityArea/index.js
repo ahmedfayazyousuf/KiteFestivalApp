@@ -1,6 +1,7 @@
-import './UserNissan.css';
+import './User.css';
 // import activityarea2Logo from '../activityarea2logo.png';
 import GetReady from '../getready.png';
+// eslint-disable-next-line
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
@@ -81,22 +82,3 @@ const ChooseActivityArea = () => {
 }
 
 export default ChooseActivityArea
-
-
-// <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
-//                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-//                     {/* <button className="grab" id="timeslot9_10" onClick={() => {Handleclick("timeslot9_10")}} value="9:AM - 10 AM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent'}}>9:00 AM</button> */}
-//                     <button className="grab" id="timeslot12:30_1:30" onClick={() => {Handleclick("timeslot12:30_1:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>12:30 PM</button>
-//                     <button className="grab" id="timeslot1:30_2:30" onClick={() => {Handleclick("timeslot1:30_2:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>1:30 PM</button>
-//                     <button className="grab" id="timeslot2:30_3:30" onClick={() => {Handleclick("timeslot2:30_3:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>2:30 PM</button>
-//                     <button className="grab" id="timeslot3:30_4:30" onClick={() => {Handleclick("timeslot3:30_4:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>3:30 PM</button>
-//                     <button className="grab" id="timeslot4:30_5:30" onClick={() => {Handleclick("timeslot4:30_5:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>4:30 PM</button>
-//                     <button className="grab" id="timeslot5:30_6:30" onClick={() => {Handleclick("timeslot5:30_6:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>5:30 PM</button>
-//                     <button className="grab" id="timeslot6:30_7:30" onClick={() => {Handleclick("timeslot6:30_7:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>6:30 PM</button>
-//                     <button className="grab" id="timeslot7:30_8:30" onClick={() => {Handleclick("timeslot7:30_8:30")}} value="7:30 PM - 8:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>7:30 PM</button>
-//                     <button className="grab" id="timeslot8:30_9:30" onClick={() => {Handleclick("timeslot8:30_9:30")}} value="8:30 PM - 9:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>8:30 PM</button>
-//                 </div>
-
-//                 <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}} onClick={() => {Handlesubmit(time)}} >Next</button>
-
-//             </div>

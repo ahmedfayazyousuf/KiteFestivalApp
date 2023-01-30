@@ -63,7 +63,7 @@ const Registration = () =>{
             
                     }).then(function(docRef) {
                         console.log("Document written with ID: ", docRef.id);
-                        navigate("/UserChooseDate",{state:{uid:docRef.id,count:0}});
+                        navigate("/ChooseActivityArea",{state:{uid:docRef.id,count:0}});
                     })
                     .catch(function(error) {
                         console.error("Error adding document: ", error);
@@ -110,25 +110,8 @@ const Registration = () =>{
         }).catch(()=>{
             console.log("error")
         })
-
-        // Users.add({
-        //     Name:Name,
-        //     Email:Email,
-        //     Number:Number,
-
-        // }).then(function(docRef) {
-        //     console.log("Document written with ID: ", docRef.id);
-        //     navigate("/UserChooseDate",{state:{uid:docRef.id,count:0}});
-        // })
-        // .catch(function(error) {
-        //     console.error("Error adding document: ", error);
-        // });
         
     }
-
-    // useEffect(()=>{
-    //     document.body.style.backgroundImage = `url(${process.env.PUBLIC_URL + '/desktop.jpg'})` 
-    // },[])
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
 
@@ -159,9 +142,9 @@ const Registration = () =>{
                     </div>
 
 
-                    <div style={{display: 'flex', width: '100%', flexDirection: 'row'}}>
-                        <button ref={buttonRef} className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}} onClick={HandleSubmit}>Back</button>
-                        <button className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}}>Submit</button>
+                    <div style={{display: 'flex', width: '100%', flexDirection: 'row'}}>                    
+                        <button className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}}>Back</button>
+                        <button ref={buttonRef} className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}} onClick={HandleSubmit}>Submit</button>
                     </div>
                 </div>
                 

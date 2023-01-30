@@ -6,11 +6,11 @@ import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import {useRef} from 'react';
 
-
+import {useLocation} from 'react-router-dom';
 
 const Registration = () =>{
     const navigate = useNavigate();
-    const { id } = useParams();
+    const location = useLocation();
     const buttonRef = useRef(null);
 
     const [count, setCount] = useState(0);
@@ -46,68 +46,26 @@ const Registration = () =>{
             return;
         }
 
+        var area = location.state.time.slice(0,7)
+        var time = location.state.time.slice(7)
 
+        Users.add({
+            Name:Name,
+            Email:Email,
+            Number:Number,
+            Time:time,
+            Area:area,
+            time: firebase.firestore.FieldValue.serverTimestamp()
 
-       
-        Users.where("Email", "==", Email).get().then((doc)=>{
-            if(doc.empty){
-
-                if(id === undefined){
-                    Users.add({
-                        Name:Name,
-                        Email:Email,
-                        Number:Number,
-                        Count:0,
-                        Dinner:"no",
-                        time: firebase.firestore.FieldValue.serverTimestamp()
-            
-                    }).then(function(docRef) {
-                        console.log("Document written with ID: ", docRef.id);
-                        navigate("/Success",{state:{uid:docRef.id,count:0}});
-                    })
-                    .catch(function(error) {
-                        console.error("Error adding document: ", error);
-                    });  
-                }else{
-                    Users.add({
-                        Name:Name,
-                        Email:Email,
-                        Number:Number,
-                        time: firebase.firestore.FieldValue.serverTimestamp()
-            
-                    }).then(function(docRef) {
-                        console.log("Document written with ID: ", docRef.id);
-                        navigate("/Success",{state:{uid:docRef.id,count:0}});
-                    })
-                    .catch(function(error) {
-                        console.error("Error adding document: ", error);
-                    });
-                }
-
-            }else{
-                doc.forEach((doc) => {
-                    if(doc.data().Count>1){
-                        console.log("Exceeded Limit")
-                        const node = document.createElement("p");
-                        node.style.color = "red";
-                        node.style.fontSize = "10px";
-                        node.style.marginLeft = "160px";
-                        node.innerHTML = "Amount of Booking Exceeded"
-                        if(count===0){
-                            document.getElementById('parent').appendChild(node);
-                            setCount(1);
-                        }
-                        
-                        console.log("added")
-                    }
-                    else{
-                        navigate("/UserChooseDate",{state:{uid:doc.id,count:doc.data().Count}});
-                    }
-                });
-            }
-        }).catch(()=>{
-            console.log("error")
+        }).then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+            navigate("/Success",{state:{uid:docRef.id,count:0}});
         })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });  
+
+
         
     }
     return(

@@ -4,6 +4,7 @@ import { useState } from "react"
 import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TimeSlot = () => {
     // eslint-disable-next-line 
@@ -12,11 +13,9 @@ const TimeSlot = () => {
     const [user, setUser] = useState([]);
 
     const { id } = useParams();
+    const navigate = useNavigate();
 
     const getKites = async () =>{
-
-    
-        
 
     const kites = firebase.firestore().collection("Kites").doc(`${id}`);
 
@@ -84,6 +83,14 @@ const TimeSlot = () => {
 //     })
 
     // console.log(Cars)
+    }
+
+    function HandleSubmit(){
+        console.log('hello')
+        if(time === ''){
+            return;
+        }
+    navigate('/registration',{state:{time:time,date:id}});
     }
 
     useEffect(()=>{
@@ -493,7 +500,7 @@ const TimeSlot = () => {
                     </button>
                 </div>
 
-                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}} >Next</button>
+                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}}  onClick= {() => HandleSubmit()}>Next</button>
 
  
             </div>

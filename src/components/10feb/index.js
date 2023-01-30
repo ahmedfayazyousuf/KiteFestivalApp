@@ -66,144 +66,144 @@ document.getElementById(`slotparent`).appendChild(node);
 
         console.log()
 
-        if(e === 'timeslot12:30_1:30'){
+        if(e === 'areaone12:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot12:30_1:30');
+            setTime('areaone12:30');
         }
         
-        if(e === 'timeslot1:30_2:30'){
+        if(e === 'areaone1:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot1:30_2:30');
+            setTime('areaone1:30');
         }
         
-        if(e === 'timeslot2:30_3:30'){
+        if(e === 'areaone2:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot2:30_3:30');
+            setTime('areaone2:30');
         }
         
-        if(e === 'timeslot3:30_4:30'){
+        if(e === 'areaone3:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot3:30_4:30');
+            setTime('areaone3:30');
         }
         
-        if(e === 'timeslot4:30_5:30'){
+        if(e === 'areaone4:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot4:30_5:30');
+            setTime('areaone4:30');
         }
 
-        if(e === 'timeslot5:30_6:30'){
+        if(e === 'areaone5:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot5:30_6:30');
+            setTime('areaone5:30');
         }
 
-        if(e === 'timeslot6:30_7:30'){
+        if(e === 'areaone6:30'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot6:30_7:30');
+            setTime('areaone6:30');
         }
         
 
@@ -212,140 +212,140 @@ document.getElementById(`slotparent`).appendChild(node);
 
 
 
-        if(e === 'timeslot1_2'){
+        if(e === 'areatwo1'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot1_2');
+            setTime('areatwo1');
         }
-        if(e === 'timeslot2_3'){
+        if(e === 'areatwo2'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot2_3');
+            setTime('areatwo2');
         }
-        if(e === 'timeslot3_4'){
+        if(e === 'areatwo3'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot3_4');
+            setTime('areatwo3');
         }
-        if(e === 'timeslot4_5'){
+        if(e === 'areatwo4'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot4_5');
+            setTime('areatwo4');
         }
-        if(e === 'timeslot5_6'){
+        if(e === 'areatwo5'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot5_6');
-        }
-
-        if(e === 'timeslot6_7'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
-
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot7_8').style.background = "transparent";
-
-            setTime('timeslot6_7');
+            setTime('areatwo5');
         }
 
-        if(e === 'timeslot7_8'){
+        if(e === 'areatwo6'){
             document.getElementById(e).style.background = "rgb(200, 197, 197)";
-            document.getElementById('timeslot12:30_1:30').style.background = "transparent";
-            document.getElementById('timeslot1:30_2:30').style.background = "transparent";
-            document.getElementById('timeslot2:30_3:30').style.background = "transparent";
-            document.getElementById('timeslot3:30_4:30').style.background = "transparent";
-            document.getElementById('timeslot4:30_5:30').style.background = "transparent";
-            document.getElementById('timeslot5:30_6:30').style.background = "transparent";
-            document.getElementById('timeslot6:30_7:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
 
-            document.getElementById('timeslot1_2').style.background = "transparent";
-            document.getElementById('timeslot2_3').style.background = "transparent";
-            document.getElementById('timeslot3_4').style.background = "transparent";
-            document.getElementById('timeslot4_5').style.background = "transparent";
-            document.getElementById('timeslot5_6').style.background = "transparent";
-            document.getElementById('timeslot6_7').style.background = "transparent";
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
 
-            setTime('timeslot7_8');
+            setTime('areatwo6');
+        }
+
+        if(e === 'areatwo7'){
+            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone6:30').style.background = "transparent";
+
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo2').style.background = "transparent";
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+
+            setTime('areatwo7');
         }
         
     }
@@ -367,25 +367,25 @@ document.getElementById(`slotparent`).appendChild(node);
                 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     
-                    <button className="grab" id="timeslot12:30_1:30" onClick={() => {Handleclick("timeslot12:30_1:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone12:30" onClick={() => {Handleclick("areaone12:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         12:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot1:30_2:30" onClick={() => {Handleclick("timeslot1:30_2:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone1:30" onClick={() => {Handleclick("areaone1:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         1:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
-                    <button className="grab" id="timeslot2:30_3:30" onClick={() => {Handleclick("timeslot2:30_3:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone2:30" onClick={() => {Handleclick("areaone2:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         2:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
-                    <button className="grab" id="timeslot3:30_4:30" onClick={() => {Handleclick("timeslot3:30_4:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone3:30" onClick={() => {Handleclick("areaone3:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         3:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
@@ -394,20 +394,20 @@ document.getElementById(`slotparent`).appendChild(node);
                     
                 </div>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="timeslot4:30_5:30" onClick={() => {Handleclick("timeslot4:30_5:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         4:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
 
-                    <button className="grab" id="timeslot5:30_6:30" onClick={() => {Handleclick("timeslot5:30_6:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot6:30_7:30" onClick={() => {Handleclick("timeslot6:30_7:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:30 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
@@ -418,25 +418,25 @@ document.getElementById(`slotparent`).appendChild(node);
                     <p style={{fontSize: '25px', marginTop: '30px', fontWeight: '900'}} >ACTIVITY AREA 2</p>
                 </div>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="timeslot1_2" onClick={() => {Handleclick("timeslot1_2")}} value="1 PM - 2 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo1" onClick={() => {Handleclick("areatwo1")}} value="1 PM - 2 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         1:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot2_3" onClick={() => {Handleclick("timeslot2_3")}} value="2 PM - 3 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo2" onClick={() => {Handleclick("areatwo2")}} value="2 PM - 3 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         2:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot3_4" onClick={() => {Handleclick("timeslot3_4")}} value="3 PM - 4 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo3" onClick={() => {Handleclick("areatwo3")}} value="3 PM - 4 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         3:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
-                    <button className="grab" id="timeslot4_5" onClick={() => {Handleclick("timeslot4_5")}} value="4 PM - 5 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo4" onClick={() => {Handleclick("areatwo4")}} value="4 PM - 5 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         4:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
@@ -444,19 +444,19 @@ document.getElementById(`slotparent`).appendChild(node);
                 </div>
 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="timeslot5_6" onClick={() => {Handleclick("timeslot5_6")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot6_7" onClick={() => {Handleclick("timeslot6_7")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
-                    <button className="grab" id="timeslot7_8" onClick={() => {Handleclick("timeslot7_8")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
+                    <button className="grab" id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         7:00 PM
                         <p><em style={{color: 'grey', }}>x kites available</em></p>
                         <p><em style={{color: 'grey', }}>x slots available</em></p>

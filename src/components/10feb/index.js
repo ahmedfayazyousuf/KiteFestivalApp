@@ -3,6 +3,7 @@ import firebase from '../../firebase'
 import { useState } from "react"
 import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
+import { useEffect } from 'react';
 
 const TimeSlot = () => {
     // eslint-disable-next-line 
@@ -12,25 +13,29 @@ const TimeSlot = () => {
 
     const { id } = useParams();
 
-    const getCars = async () =>{
+    const getKites = async () =>{
+
+    
         
 
     const kites = firebase.firestore().collection("Kites").doc(`${id}`);
-    // eslint-disable-next-line
-    const Cars = Location.collection('models').doc(`${id}`).collection('timeslot').get().then((querySnapshot) => {
+
+    kites.collection("Areas").doc("Area1").collection('timeslots').get().then((querySnapshot) => {
         var count = 0;
     querySnapshot.forEach((doc) => {
-        Location.collection('models').doc(`${id}`).collection('timeslot').doc(`${doc.id}`).get().then((doc2)=>{
-            console.log()
+        kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
+            var time=doc.id.slice(0,-3)
+            console.log(time)
             if(doc2.data().available<=0){
-                document.getElementById(`${doc.id}`).disabled = true;
-                document.getElementById(`${doc.id}`).style.display = "none";
-                // document.getElementById(`${doc.id}`).remove();
-                setCcount(ccount+1)
+                document.getElementById(`areaone${time}`).disabled = true;
+                document.getElementById(`areaone${time}`).style.display = "none";
             }
+            document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} kites available`
+            document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} slots available`
+
         })
 
-        console.log(count);
+
 
         
 
@@ -38,27 +43,52 @@ const TimeSlot = () => {
     });
 
 
-    }).then(()=>{
-     
-        if(ccount === 8){
-           
-        }
     })
 
-    const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslot').where("available", "==", 0).get().then((doc)=>{
-        console.log(doc.size)
-        if(doc.size === 8){
-                    const node = document.createElement("p");
-        node.style.color = "red";
-        node.style.fontSize = "10px";
-        node.style.marginRight = "10px";
-        node.innerHTML = "No Timeslots Available";
-document.getElementById(`slotparent`).appendChild(node);
-        }
+    kites.collection("Areas").doc("Area2").collection('timeslots').get().then((querySnapshot) => {
+        var count = 0;
+    querySnapshot.forEach((doc) => {
+        kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
+            var time=doc.id.slice(0,-6)
+            console.log(time)
+            if(doc2.data().available<=0){
+                document.getElementById(`areatwo${time}`).disabled = true;
+                document.getElementById(`areatwo${time}`).style.display = "none";
+            }
+
+            document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} kites available`
+            document.getElementById(`areatwo${time}s`).innerHTML = `${doc2.data().slots} slots available`
+        })
+
+
+        
+
+        setUser(current => [...current, doc.data()]);
+    });
+
+
     })
+    // eslint-disable-next-line
+  
+
+//     const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslot').where("available", "==", 0).get().then((doc)=>{
+//         console.log(doc.size)
+//         if(doc.size === 8){
+//                     const node = document.createElement("p");
+//         node.style.color = "red";
+//         node.style.fontSize = "10px";
+//         node.style.marginRight = "10px";
+//         node.innerHTML = "No Timeslots Available";
+// document.getElementById(`slotparent`).appendChild(node);
+//         }
+//     })
 
     // console.log(Cars)
     }
+
+    useEffect(()=>{
+        getKites()
+    },[])
    
 
     function Handleclick(e){
@@ -369,26 +399,26 @@ document.getElementById(`slotparent`).appendChild(node);
                     
                     <button className="grab" id="areaone12:30" onClick={() => {Handleclick("areaone12:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         12:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone12:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone12:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areaone1:30" onClick={() => {Handleclick("areaone1:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         1:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone1:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone1:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
                     <button className="grab" id="areaone2:30" onClick={() => {Handleclick("areaone2:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         2:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone2:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone2:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
                     <button className="grab" id="areaone3:30" onClick={() => {Handleclick("areaone3:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         3:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone3:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone3:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     
@@ -396,21 +426,21 @@ document.getElementById(`slotparent`).appendChild(node);
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         4:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone4:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone4:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
 
                     <button className="grab" id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone5:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone5:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone6:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone6:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 
@@ -420,46 +450,46 @@ document.getElementById(`slotparent`).appendChild(node);
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areatwo1" onClick={() => {Handleclick("areatwo1")}} value="1 PM - 2 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         1:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo1k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo1s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo2" onClick={() => {Handleclick("areatwo2")}} value="2 PM - 3 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         2:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo2k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo2s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo3" onClick={() => {Handleclick("areatwo3")}} value="3 PM - 4 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         3:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo3k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo3s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
                     <button className="grab" id="areatwo4" onClick={() => {Handleclick("areatwo4")}} value="4 PM - 5 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         4:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo4k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo4s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo5k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo5s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo6k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo6s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         7:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo7k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo7s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 

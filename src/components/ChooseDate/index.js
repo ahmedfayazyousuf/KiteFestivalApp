@@ -73,25 +73,25 @@ const ChooseDate = () => {
             <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0', gap:'30px', marginTop:'10px'}} >
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
-                    <div id='9feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
+                    <div id='9feb' className="content content-1" onClick={()=>{dateClick("9feb")}} style={{padding: '0', margin: '10px'}}>
                         <p>9 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='10feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
+                    <div id='10feb' className="content content-1" onClick={()=>{dateClick("10feb")}} style={{padding: '0', margin: '10px'}}>
                         <p>10 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='11feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
+                    <div id='11feb' className="content content-1" onClick={()=>{dateClick("11feb")}} style={{padding: '0', margin: '10px'}}>
                         <p>11 Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
-                    <div id='12feb' className="content content-1" onClick={()=>{dateClick()}} style={{padding: '0', margin: '10px'}}>
+                    <div id='12feb' className="content content-1" onClick={()=>{dateClick("12feb")}} style={{padding: '0', margin: '10px'}}>
                         <p>12 Feb</p>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const ChooseDate = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh'}} >
-                <button className="grab" style={{color:"white", background:"black",width:"150px",borderRadius: '5px', padding: '10px'}} variant="contained" onClick= {() => Handleclick(date)}>Next</button> 
+                <button className="grab" style={{color:"white", background:"black",width:"150px",borderRadius: '5px', padding: '10px'}} variant="contained" onClick= {() => Handleclick()}>Next</button> 
             </div>
 
               

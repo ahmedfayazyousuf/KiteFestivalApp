@@ -63,7 +63,7 @@ const Registration = () =>{
             
                     }).then(function(docRef) {
                         console.log("Document written with ID: ", docRef.id);
-                        navigate("/ChooseActivityArea",{state:{uid:docRef.id,count:0}});
+                        navigate("/Success",{state:{uid:docRef.id,count:0}});
                     })
                     .catch(function(error) {
                         console.error("Error adding document: ", error);
@@ -73,13 +73,11 @@ const Registration = () =>{
                         Name:Name,
                         Email:Email,
                         Number:Number,
-                        Count:0,
-                        Dinner:"yes",
                         time: firebase.firestore.FieldValue.serverTimestamp()
             
                     }).then(function(docRef) {
                         console.log("Document written with ID: ", docRef.id);
-                        navigate("/UserChooseDate",{state:{uid:docRef.id,count:0}});
+                        navigate("/Success",{state:{uid:docRef.id,count:0}});
                     })
                     .catch(function(error) {
                         console.error("Error adding document: ", error);

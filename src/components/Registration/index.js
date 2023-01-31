@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
 import '../All.css';
@@ -15,6 +15,7 @@ const Registration = () =>{
 
     const [count, setCount] = useState(0);
     const [emailB, setEmailB] = useState(false);
+
 
 
     function HandleSubmit(){
@@ -56,8 +57,65 @@ const Registration = () =>{
             Time:time,
             Area:area,
             time: firebase.firestore.FieldValue.serverTimestamp()
- 
-        }).then(function(docRef) {
+
+        }).then( function(docRef) {
+
+            const kites = firebase.firestore().collection("Kites").doc(`${location.state.date}`);
+
+            if(area === 'areaone'){
+                var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
+                timeslot.get().then(async (doc)=>{
+                    console.log(doc.data())
+                    var data = doc.data() 
+
+                    if(data.kites <= 0){
+                        if(data.slots <=0){
+                            return;
+                        }
+                    }
+
+                    if(kites<=0){
+                        await timeslot.update({
+                            slots: firebase.firestore.FieldValue.increment(-1)
+                        });
+                        return;
+                    }
+
+                    await timeslot.update({
+                        kites: firebase.firestore.FieldValue.increment(-1),
+                        slots: firebase.firestore.FieldValue.increment(-1)
+                    });
+                    
+                })
+            }
+
+            if(area === 'areatwo'){
+                var timeslot2 = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time} PM`)
+                timeslot2.get().then(async (doc)=>{
+
+                    console.log(doc.data())
+                    var data = doc.data()
+                    if(data.kites <= 0){
+                        if(data.slots <=0){
+                            return;
+                        }
+                    }
+
+                    if(kites<=0){
+                        await timeslot.update({
+                            slots: firebase.firestore.FieldValue.increment(-1)
+                        });
+                        return;
+                    }
+
+                    await timeslot.update({
+                        kites: firebase.firestore.FieldValue.increment(-1),
+                        slots: firebase.firestore.FieldValue.increment(-1)
+                    });
+                })
+            }
+
+            
             console.log("Document written with ID: ", docRef.id);
             navigate("/Success",{state:{uid:docRef.id,count:0}});
         })
@@ -69,7 +127,7 @@ const Registration = () =>{
         
     }
     return(
-        <div style={{height: '100vh', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
+        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px', marginBottom: '10px'}}/>

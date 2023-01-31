@@ -56,7 +56,7 @@ const Registration = () =>{
             Time:time,
             Area:area,
             time: firebase.firestore.FieldValue.serverTimestamp()
-
+ 
         }).then(function(docRef) {
             console.log("Document written with ID: ", docRef.id);
             navigate("/Success",{state:{uid:docRef.id,count:0}});
@@ -69,7 +69,7 @@ const Registration = () =>{
         
     }
     return(
-        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
+        <div style={{height: '100vh', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                 <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px', marginBottom: '10px'}}/>

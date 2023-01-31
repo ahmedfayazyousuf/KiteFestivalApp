@@ -13,6 +13,7 @@ import TwelveFeb from './components/12feb';
 
 
 import Success from './components/Success';
+import HomePage from './components/HomePage';
 import Error from './components/Error';
 // import TimeSlot from './components/TimeSlot';
 import Registration from './components/Registration';
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/12feb" element={<TwelveFeb />} />
 
           <Route path="/Registration" element={<Registration/>} />
+          <Route path="/homepage" element={<HomePage />} />
           <Route path="/:id" element={<Registration/>} />
 
           {/* <Route path="/User/:id" element={<TimeSlot />} /> */}

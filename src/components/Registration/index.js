@@ -16,6 +16,33 @@ const Registration = () =>{
     const [count, setCount] = useState(0);
     const [emailB, setEmailB] = useState(false);
 
+    function onlyOnetwo(e) {
+        var checkm = document.getElementById('checkmd');
+        var checkf = document.getElementById('checkfd');
+        // checkm.checked = !checkm.checked 
+        // checkf.checked = !checkf.checked 
+        // console.log(checkbox)
+
+        if(e === 'm'){
+            console.log("lol")
+            
+            checkf.checked = false
+            
+            // setUser({...user, [firstname]:value})
+        }
+
+        if(e === 'f'){
+            console.log("lil")
+            
+            checkm.checked = false
+
+            // setUser({...user, [firstname]:value})
+        }
+
+
+
+    }
+
 
 
     function HandleSubmit(){
@@ -151,6 +178,14 @@ const Registration = () =>{
                             <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid white", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }} />
                         </div>
                     </div>
+
+                    <div  style={{display:"flex",flexDirection:"column"}}>
+                            <label style={{color:"white", fontWeight:"400"}}>Kite Assigned</label>
+                            <div style={{display:"flex",flexDirection:"row"}}>  
+                                <label style={{color:"white", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
+                                <label style={{color:"white", fontWeight:"400"}}><input id='checkfd' style={{marginRight: '10px',accentColor: "#029CFC",background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
+                            </div>
+                        </div>
 
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row',gap:"20px"}}>                    

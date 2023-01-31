@@ -79,29 +79,29 @@ const ChooseDate = () => {
                 <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >SELECT A DATE</p>
             </div>
 
-            <div className="rower" style={{display: 'flex', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0', gap:'5px', marginTop:'10px'}} >
+            <div className="rower" style={{display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center', margin: '0', padding:'0', gap:'5px', marginTop:'10px'}} >
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
                     <div id='9feb' className="content content-1" onClick={()=>{dateClick("9feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '10px', paddingBottom: '10px'}}>9 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>9 - Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='10feb' className="content content-1" onClick={()=>{dateClick("10feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '10px', paddingBottom: '10px'}}>10 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>10 - Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='11feb' className="content content-1" onClick={()=>{dateClick("11feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '10px', paddingBottom: '10px'}}>11 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>11 - Feb</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='12feb' className="content content-1" onClick={()=>{dateClick("12feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '10px', paddingBottom: '10px'}}>12 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>12 - Feb</p>
                     </div>
                 </div>
                 

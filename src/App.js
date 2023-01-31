@@ -2,14 +2,11 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import "./App.css";
 
-import ChooseActivityArea from './components/ChooseActivityArea';
 
 import ChooseDate from './components/ChooseDate';
 
 import NineFeb from './components/9feb';
 import TenFeb from './components/10feb';
-import ElevenFeb from './components/11feb';
-import TwelveFeb from './components/12feb';
 
 
 import Success from './components/Success';
@@ -23,12 +20,9 @@ const App = () => {
     <>
       <Routes>
           <Route exact path="/" element={<ChooseDate />} />
-          <Route path="/ChooseActivityArea" element={<ChooseActivityArea />} />
 
           <Route path="/Date/9feb" element={<NineFeb />} />
           <Route path="/Date/:id" element={<TenFeb />} />
-          <Route path="/11feb" element={<ElevenFeb />} />
-          <Route path="/12feb" element={<TwelveFeb />} />
 
           <Route path="/Registration" element={<Registration/>} />
           <Route path="/homepage" element={<HomePage />} />

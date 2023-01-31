@@ -1,4 +1,4 @@
-
+import './User.css';
 import firebase from '../../firebase'
 import { useState } from "react"
 import GetReady from '../getready.png';
@@ -104,7 +104,8 @@ const TimeSlot = () => {
         console.log()
 
         if(e === 'areaone12:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
             document.getElementById('areaone3:30').style.background = "transparent";
@@ -119,12 +120,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone12:30');
         }
         
         if(e === 'areaone1:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
             document.getElementById('areaone3:30').style.background = "transparent";
@@ -139,12 +156,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone1:30');
         }
         
         if(e === 'areaone2:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone3:30').style.background = "transparent";
@@ -159,12 +192,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone2:30');
         }
         
         if(e === 'areaone3:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -179,12 +228,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone3:30');
         }
         
         if(e === 'areaone4:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -199,12 +264,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone4:30');
         }
 
         if(e === 'areaone5:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -220,11 +301,27 @@ const TimeSlot = () => {
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
 
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
             setTime('areaone5:30');
         }
 
         if(e === 'areaone6:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -239,6 +336,21 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areaone6:30');
         }
@@ -250,7 +362,8 @@ const TimeSlot = () => {
 
 
         if(e === 'areatwo1'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -265,11 +378,27 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areatwo1');
         }
         if(e === 'areatwo2'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -284,11 +413,27 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areatwo2');
         }
         if(e === 'areatwo3'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -303,11 +448,27 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areatwo3');
         }
         if(e === 'areatwo4'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -323,10 +484,26 @@ const TimeSlot = () => {
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
 
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
             setTime('areatwo4');
         }
         if(e === 'areatwo5'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -341,12 +518,28 @@ const TimeSlot = () => {
             document.getElementById('areatwo4').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
 
             setTime('areatwo5');
         }
 
         if(e === 'areatwo6'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -362,11 +555,27 @@ const TimeSlot = () => {
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
 
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
             setTime('areatwo6');
         }
 
         if(e === 'areatwo7'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone12:30').style.background = "transparent";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";
@@ -381,6 +590,21 @@ const TimeSlot = () => {
             document.getElementById('areatwo4').style.background = "transparent";
             document.getElementById('areatwo5').style.background = "transparent";
             document.getElementById('areatwo6').style.background = "transparent";
+
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo2').style.color = "black";
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
 
             setTime('areatwo7');
         }
@@ -388,123 +612,174 @@ const TimeSlot = () => {
     }
     
     return(
-        <>
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                <img src={GetReady} alt="Logo" style={{width: '20vh', marginTop: '30px', marginBottom: '10px'}}/>
-            </div>
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper2.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}} >
 
-            <div style={{display: 'flex', flexDirection: 'column', textAlign: 'center', margin: '0', padding: '0'}} >
-                <p style={{fontSize: '15px', marginTop: '10px'}} >Choose a slot!</p>
-            </div>
-
-            <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
-                <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
-                    <p style={{fontSize: '25px', fontWeight: '900'}} >ACTIVITY AREA 1</p>
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', marginBottom: '20px'}} >
+                    <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >ACTIVITY AREA 1</p>
                 </div>
                 
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     
-                    <button className="grab" id="areaone12:30" onClick={() => {Handleclick("areaone12:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        12:30 PM
-                        <p id="areaone12:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone12:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button  id="areaone12:30"  onClick={() => {Handleclick("areaone12:30")}} value="12:30 PM - 1:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                12:30 PM
+                                <p id="areaone12:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone12:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div> 
+                                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone1:30" onClick={() => {Handleclick("areaone1:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                1:30 PM
+                                <p id="areaone1:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone1:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>                  
                     
-                    <button className="grab" id="areaone1:30" onClick={() => {Handleclick("areaone1:30")}} value="1:30 PM - 2:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        1:30 PM
-                        <p id="areaone1:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone1:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone2:30" onClick={() => {Handleclick("areaone2:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                2:30 PM
+                                <p id="areaone2:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone2:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>                  
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone3:30" onClick={() => {Handleclick("areaone3:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                3:30 PM
+                                <p id="areaone3:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone3:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>  
 
-                    <button className="grab" id="areaone2:30" onClick={() => {Handleclick("areaone2:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        2:30 PM
-                        <p id="areaone2:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone2:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-
-                    <button className="grab" id="areaone3:30" onClick={() => {Handleclick("areaone3:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        3:30 PM
-                        <p id="areaone3:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone3:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-                    
-                    
-                </div>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        4:30 PM
-                        <p id="areaone4:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone4:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-
-
-                    <button className="grab" id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        5:30 PM
-                        <p id="areaone5:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone5:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-                    
-                    <button className="grab" id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        6:30 PM
-                        <p id="areaone6:30k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areaone6:30s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
                 </div>
 
-                <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
-                    <p style={{fontSize: '25px', marginTop: '30px', fontWeight: '900'}} >ACTIVITY AREA 2</p>
-                </div>
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="areatwo1" onClick={() => {Handleclick("areatwo1")}} value="1 PM - 2 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        1:00 PM
-                        <p id="areatwo1k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo1s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-                    
-                    <button className="grab" id="areatwo2" onClick={() => {Handleclick("areatwo2")}} value="2 PM - 3 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        2:00 PM
-                        <p id="areatwo2k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo2s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-                    
-                    <button className="grab" id="areatwo3" onClick={() => {Handleclick("areatwo3")}} value="3 PM - 4 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        3:00 PM
-                        <p id="areatwo3k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo3s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
 
-                    <button className="grab" id="areatwo4" onClick={() => {Handleclick("areatwo4")}} value="4 PM - 5 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        4:00 PM
-                        <p id="areatwo4k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo4s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
-                </div>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
 
-                <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
-                    <button className="grab" id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        5:00 PM
-                        <p id="areatwo5k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo5s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                4:30 PM
+                                <p id="areaone4:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone4:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>                  
                     
-                    <button className="grab" id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        6:00 PM
-                        <p id="areatwo6k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo6s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                5:30 PM
+                                <p id="areaone5:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone5:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                        </div>                 
                     
-                    <button className="grab" id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
-                        7:00 PM
-                        <p id="areatwo7k"><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p id="areatwo7s"><em style={{color: 'grey', }}>x slots available</em></p>
-                    </button>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                6:30 PM
+                                <p id="areaone6:30k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areaone6:30s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>    
+
                 </div>
 
-                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}}  onClick= {() => HandleSubmit()}>Next</button>
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', marginBottom: '20px', marginTop: '50px'}} >
+                    <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >ACTIVITY AREA 2</p>
+                </div>
 
- 
-            </div>
-        </>
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo1" onClick={() => {Handleclick("areatwo1")}} value="1 PM - 2 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                1:00 PM
+                                <p id="areatwo1k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo1s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>                 
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo2" onClick={() => {Handleclick("areatwo2")}} value="2 PM - 3 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                2:00 PM
+                                <p id="areatwo2k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo2s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>                 
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo3" onClick={() => {Handleclick("areatwo3")}} value="3 PM - 4 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                3:00 PM
+                                <p id="areatwo3k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo3s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>                  
+   
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo4" onClick={() => {Handleclick("areatwo4")}} value="4 PM - 5 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                4:00 PM
+                                <p id="areatwo4k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo4s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>  
+
+                </div>
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                5:00 PM
+                                <p id="areatwo5k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo5s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                6:00 PM
+                                <p id="areatwo6k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo6s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500'}}>
+                                7:00 PM
+                                <p id="areatwo7k" style={{color: 'grey', fontSize: '13px'}}><em >x kites available</em></p>
+                                <p id="areatwo7s" style={{color: 'grey', fontSize: '13px'}}><em>x slots available</em></p>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}}  onClick= {() => HandleSubmit()}>Next</button>
+        </div>
     )
 }
 

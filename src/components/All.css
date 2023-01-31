@@ -3,7 +3,7 @@
 body, html{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    background-image: url("desktop2.jpg");
+    background-image: url("/public/wallpaper2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

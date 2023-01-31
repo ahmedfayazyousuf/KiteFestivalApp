@@ -1,4 +1,3 @@
-import './wallpaper.jpg';
 
 const HomePage = () => { 
 

@@ -37,7 +37,7 @@ const Registration = () =>{
                 const name = document.getElementById('parent')
                 el.id = "emailerr"
                 el.style.color = "red";
-                el.style.marginLeft = "160px";
+                el.style.marginLeft = "1100px";
                 el.style.fontSize = "10px";
                 el.innerHTML = "Invalid Email"
                 name.appendChild(el);
@@ -127,38 +127,35 @@ const Registration = () =>{
         
     }
     return(
-        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("desktop.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
+        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}} >
 
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                <img src={GetReady} alt="Logo" style={{width: '40vh', marginTop: '30px', marginBottom: '10px'}}/>
-            </div>
 
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "30vh", justifyContent:"center", alignItems:"center"}}>
+            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '400px', gap:'10px', alignItems: 'center'}}>
 
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', width: '100%'}}>
-                        <label>Name</label>
-                        <input type="text" id="Name" style={{marginLeft: '10px', marginRight:'45px',width:"60%", height:'27px'}} /> 
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
+                        <label style={{color:"white", fontWeight:"400"}}>Name</label>
+                        <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid white", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }}/> 
                     </div>
                     
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', width: '100%'}}>
-                        <label>Email</label>
-                        <input type="email" id='email' style={{marginLeft: '10px',marginRight:'45px', width:"60%", height:'27px'}} />
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
+                        <label style={{color:"white", fontWeight:"400"}}>Email</label>
+                        <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid white", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }} />
                     </div>
 
 
                     <div id='parent' style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
-                        <div  style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', width: '100%'}}>
-                            <label>Mobile</label>
-                            <input type="number" id='no' style={{marginLeft: '10px', marginRight:'45px', marginBottom:'15px', width:"60%", height:'27px'}} />
+                        <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
+                            <label style={{color:"white", fontWeight:"400"}}>Mobile</label>
+                            <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid white", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }} />
                         </div>
                     </div>
 
 
-                    <div style={{display: 'flex', width: '100%', flexDirection: 'row'}}>                    
-                        <button className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}}>Back</button>
-                        <button ref={buttonRef} className="grab" style={{width:"180px", marginTop: '30px', margin: '10px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', fontSize:'15px'}} onClick={HandleSubmit}>Submit</button>
+                    <div style={{display: 'flex', width: '100%', flexDirection: 'row',gap:"20px"}}>                    
+                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                        <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>Submit</button>
                     </div>
                 </div>
                 

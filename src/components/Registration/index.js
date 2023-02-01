@@ -119,7 +119,7 @@ const Registration = () =>{
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
-                        axios.post("http://localhost:4000/send_sms", {
+                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                         name, date, time, number
                         })
                         return;
@@ -129,7 +129,7 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
-                    axios.post("http://localhost:4000/send_sms", {
+                    axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                         name, date, time, number
                         })
                     
@@ -152,7 +152,7 @@ const Registration = () =>{
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
-                        axios.post("http://localhost:4000/send_sms", {
+                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                             name, date, time, number
                             })
                         return;
@@ -162,7 +162,7 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
-                    axios.post("http://localhost:4000/send_sms", {
+                    axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                         name, date, time, number
                         })
                 })

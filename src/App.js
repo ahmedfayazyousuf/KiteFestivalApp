@@ -8,7 +8,8 @@ import ChooseDate from './components/ChooseDate';
 import NineFeb from './components/9feb';
 import TenFeb from './components/10feb';
 
-
+import AdminLogin from './components/AdminLogin';
+import AdminPanel from './components/AdminPanel';
 import Success from './components/Success';
 import HomePage from './components/HomePage';
 import Error from './components/Error';
@@ -25,6 +26,8 @@ const App = () => {
           <Route path="/Date/:id" element={<TenFeb />} />
 
           <Route path="/Registration" element={<Registration/>} />
+          <Route path="/AdminPanel" element={<AdminPanel/>} />
+          <Route path="/AdminLogin" element={<AdminLogin/>} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/:id" element={<Registration/>} />
 

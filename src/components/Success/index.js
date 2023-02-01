@@ -13,7 +13,7 @@ const Success = () => {
             }   
         });
         console.log(singleDoc)
-    })
+    },[]);
 
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper4.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
@@ -43,12 +43,12 @@ const Success = () => {
                                 <tr>
                                     <td style={{textAlign: 'left', color: 'white'}}>Date</td>
                                     <td style={{width: '40px', color: 'white'}}>:</td>
-                                    <td style={{textAlign: 'left', color: 'white'}}>9 Feb</td>
+                                    <td style={{textAlign: 'left', color: 'white'}}>xxx</td>
                                 </tr>
                                 <tr>
                                     <td style={{textAlign: 'left', color: 'white'}}>Time</td>
                                     <td style={{width: '40px', color: 'white'}}>:</td>
-                                    <td style={{textAlign: 'left', color: 'white'}}>{singleDoc.Time}</td>
+                                    <td style={{textAlign: 'left', color: 'white'}}>{singleDoc.Time}<span> PM</span></td>
                                 </tr>
                             </tbody>
                         </table>

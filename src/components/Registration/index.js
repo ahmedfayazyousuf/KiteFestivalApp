@@ -39,13 +39,7 @@ const Registration = () =>{
 
             // setUser({...user, [firstname]:value})
         }
-
-
-
     }
-
-
-
     function HandleSubmit(){
 
         buttonRef.current.disabled = true;

@@ -133,11 +133,11 @@ const Registration = () =>{
             }
 
             if(area === 'areatwo'){
-                var timeslot2 = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time} PM`)
-                timeslot2.get().then(async (doc)=>{
-
+                var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
+                timeslot.get().then(async (doc)=>{
                     console.log(doc.data())
-                    var data = doc.data()
+                    var data = doc.data() 
+
                     if(data.kites <= 0){
                         if(data.slots <=0){
                             return;
@@ -149,8 +149,8 @@ const Registration = () =>{
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
                         axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
-                            name, date, time, number
-                            })
+                        name, date, time, number
+                        })
                         return;
                     }
 
@@ -161,6 +161,7 @@ const Registration = () =>{
                     axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                         name, date, time, number
                         })
+                    
                 })
             }
 
@@ -195,19 +196,19 @@ const Registration = () =>{
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
                         <label style={{color:"#54B2E9", fontWeight:"400"}}>Name</label>
-                        <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }}/> 
+                        <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }}/> 
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
                         <label style={{color:"#54B2E9", fontWeight:"400"}}>Email</label>
-                        <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }} />
+                        <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }} />
                     </div>
 
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
                             <label style={{color:"#54B2E9", fontWeight:"400"}}>Mobile</label>
-                            <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(255,255,255,0.5" }} />
+                            <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }} />
                         </div>
                     </div>
 

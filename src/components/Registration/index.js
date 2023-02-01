@@ -76,6 +76,7 @@ const Registration = () =>{
 
         var area = location.state.time.slice(0,7)
         var time = location.state.time.slice(7)
+        var date = location.state.date
 
         Users.add({
             Name:Name,
@@ -83,6 +84,7 @@ const Registration = () =>{
             Number:Number,
             Time:time,
             Area:area,
+            Date: date,
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {

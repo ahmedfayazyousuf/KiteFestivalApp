@@ -470,7 +470,7 @@ const TimeSlot = () => {
                     </button>
                 </div>
 
-                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}} nClick= {() => HandleSubmit()} >Next</button>
+                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}} onClick= {() => HandleSubmit()} >Next</button>
 
  
             </div>

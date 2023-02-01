@@ -20,9 +20,9 @@ const AdminLogin = () =>{
     },[])
 
     return(
-        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
-                <table style={{color: '#fff', opacity: '.7', borderRadius: '5px'}}>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
+            <div style={{display:"flex", flexDirection:"column", width:"100%", height: "80%", justifyContent:"center", alignItems:"center", overflowY: 'scroll'}}>
+                <table style={{backgroundColor: '#fff', opacity: '.5', borderRadius: '5px', width: '90%'}}>
                     <thead>
                         <tr>
                             <td>Name</td>
@@ -33,9 +33,9 @@ const AdminLogin = () =>{
                     </thead>
                     <tbody>
                     {allDocs.map((doc) => (
-                            <tr key={doc._id}>
+                            <tr key={doc._id} style={{textAlign: 'center'}}>
                                 <td>{doc.Name}</td>
-                                <td>{doc.Time}</td>                     
+                                <td>{doc.Time}<span> PM</span></td>                     
                                 <td>{doc.slug}</td>
                                 <td>
                                     <button style={{backgroundColor: '#495151', color: 'white', borderColor: 'white', marginRight: '5px', textDecoration: 'none'}}>Edit</button>

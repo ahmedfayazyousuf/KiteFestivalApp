@@ -1,48 +1,100 @@
-
-// import firebase from '../../firebase'
+import './User.css';
+import firebase from '../../firebase'
 import { useState } from "react"
 import GetReady from '../getready.png';
+import { useParams } from "react-router-dom";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const TimeSlot = () => {
     // eslint-disable-next-line 
     const [time, setTime] = useState('');
     // eslint-disable-next-line 
     const [user, setUser] = useState([]);
+    const navigate = useNavigate();
     // const [ccount, setCcount] = useState(0);
 
-    // const getKites = async () =>{
-    //     var cccount = 0
-    //     const Location = firebase.firestore().collection("Kites").doc(`${location.state.car}`);
-    //     // eslint-disable-next-line
-    //     const Cars = Location.collection('Areas').doc(`${id}`).collection('timeslots').get().then((querySnapshot) => {
-    //         var count = 0;
-    //     querySnapshot.forEach((doc) => {
-    //         Location.collection('models').doc(`${id}`).collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
-    //             console.log()
-    //             if(doc2.data().available<=0){
-    //                 document.getElementById(`${doc.id}`).disabled = true;
-    //                 document.getElementById(`${doc.id}`).style.display = "none";
-    //                 setCcount(ccount+1)
-    //             }
-    //         })
-    //         console.log(count);
-    //         setUser(current => [...current, doc.data()]);
-    //     });
-    //     }).then(()=>{
-    //         if(ccount === 10){
-    //         }
-    //     })
-    //     const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslots').where("available", "==", 0).get().then((doc)=>{
-    //     console.log(doc.size)
-    //     if(doc.size === 10){
-    //         const node = document.createElement("p");
+    const getKites = async () =>{
+
+        const kites = firebase.firestore().collection("Kites").doc(`9feb`);
+    
+        kites.collection("Areas").doc("Area1").collection('timeslots').get().then((querySnapshot) => {
+            var count = 0;
+        querySnapshot.forEach((doc) => {
+            kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
+                var time=doc.id.slice(0,-3)
+                console.log(time)
+                if(doc2.data().available<=0){
+                    document.getElementById(`areaone${time}`).disabled = true;
+                    document.getElementById(`areaone${time}`).style.display = "none";
+                }
+                document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} kites available`
+                document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} slots available`
+    
+            })
+    
+    
+    
+            
+    
+            setUser(current => [...current, doc.data()]);
+        });
+    
+    
+        })
+    
+        kites.collection("Areas").doc("Area2").collection('timeslots').get().then((querySnapshot) => {
+            var count = 0;
+        querySnapshot.forEach((doc) => {
+            kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
+                var time=doc.id.slice(0,-6)
+                console.log(time)
+                if(doc2.data().available<=0){
+                    document.getElementById(`areatwo${time}`).disabled = true;
+                    document.getElementById(`areatwo${time}`).style.display = "none";
+                }
+    
+                document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} kites available`
+                document.getElementById(`areatwo${time}s`).innerHTML = `${doc2.data().slots} slots available`
+            })
+    
+    
+            
+    
+            setUser(current => [...current, doc.data()]);
+        });
+    
+    
+        })
+        // eslint-disable-next-line
+      
+    
+    //     const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslot').where("available", "==", 0).get().then((doc)=>{
+    //         console.log(doc.size)
+    //         if(doc.size === 8){
+    //                     const node = document.createElement("p");
     //         node.style.color = "red";
     //         node.style.fontSize = "10px";
     //         node.style.marginRight = "10px";
     //         node.innerHTML = "No Timeslots Available";
-    //         document.getElementById(`slotparent`).appendChild(node);
-    //     }
-    // })
-    // }
+    // document.getElementById(`slotparent`).appendChild(node);
+    //         }
+    //     })
+    
+        // console.log(Cars)
+        }
+    
+        function HandleSubmit(){
+            console.log('hello')
+            if(time === ''){
+                return;
+            }
+        navigate('/registration',{state:{time:time,date:"9feb"}});
+        }
+    
+        useEffect(()=>{
+            getKites()
+        },[])
 
     function Handleclick(e){
         console.log(user)

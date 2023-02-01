@@ -5,7 +5,6 @@ import '../All.css';
 import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import {useRef} from 'react';
-import axios from "axios";
 
 import {useLocation} from 'react-router-dom';
 
@@ -13,7 +12,6 @@ const Registration = () =>{
     const navigate = useNavigate();
     const location = useLocation();
     const buttonRef = useRef(null);
-    // const { user_id } = useParams();
 
     const [count, setCount] = useState(0);
     const [emailB, setEmailB] = useState(false);
@@ -88,19 +86,8 @@ const Registration = () =>{
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {
-            var area = location.state.time.slice(0,7)
-            var time = location.state.time.slice(7)
 
             const kites = firebase.firestore().collection("Kites").doc(`${location.state.date}`);
-            console.log(location.state.date, time)
-
-            const name = document.getElementById("Name").value
-
-            const number = document.getElementById("no").value
-
-            var date = location.state.date;
-
-
 
             if(area === 'areaone'){
                 var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
@@ -114,13 +101,10 @@ const Registration = () =>{
                         }
                     }
 
-                    if(data.kites<=0){
+                    if(kites<=0){
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
-                        axios.post("http://localhost:4000/send_sms", {
-                        name, date, time, number
-                        })
                         return;
                     }
 
@@ -128,9 +112,6 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
-                    axios.post("http://localhost:4000/send_sms", {
-                        name, date, time, number
-                        })
                     
                 })
             }
@@ -147,13 +128,10 @@ const Registration = () =>{
                         }
                     }
 
-                    if(data.kites<=0){
+                    if(kites<=0){
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
-                        axios.post("http://localhost:4000/send_sms", {
-                            name, date, time, number
-                            })
                         return;
                     }
 
@@ -161,9 +139,6 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
-                    axios.post("http://localhost:4000/send_sms", {
-                        name, date, time, number
-                        })
                 })
             }
 
@@ -208,7 +183,7 @@ const Registration = () =>{
                             <label style={{color:"white", fontWeight:"400"}}>Kite Assigned</label>
                             <div style={{display:"flex",flexDirection:"row"}}>  
                                 <label style={{color:"white", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
-                                <label style={{color:"white", fontWeight:"400"}}><input id='checkfd' style={{marginRight: '10px',accentColor: "#029CFC",background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
+                                <label style={{color:"white", fontWeight:"400"}}><input id='checkfd' style={{marginRight: '10px',accentColor: "#029CFC"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
                             </div>
                         </div>
 

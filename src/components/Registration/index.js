@@ -85,7 +85,7 @@ const Registration = () =>{
             Number:Number,
             Time:time,
             Area:area,
-            Date: date,
+            Date:date,
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {

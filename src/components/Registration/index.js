@@ -152,8 +152,8 @@ const Registration = () =>{
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
                         axios.post("http://localhost:4000/send_sms", {
-                                           name, date, time, number
-                                         })
+                            name, date, time, number
+                            })
                         return;
                     }
 

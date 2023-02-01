@@ -24,31 +24,31 @@ const Success = () => {
                 </div>
 
                 <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
-                    <h1 style={{fontSize: '20px', color: 'white', fontWeight: '500'}}>Booking Details</h1>
+                    <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500'}}>Booking Details</h1>
 
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '400px'}}>
 
                         <table>
                             <tbody>
                                 <tr>
-                                    <th style={{textAlign: 'left', color: 'white'}}>Name</th>
-                                    <th style={{width: '40px', color: 'white'}}>:</th>
-                                    <th style={{textAlign: 'left', color: 'white'}}>{singleDoc.Name}</th>
+                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>Name</th>
+                                    <th style={{width: '40px', color: '#54B2E9'}}>:</th>
+                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Name}</th>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: 'white'}}>Location</td>
-                                    <td style={{width: '40px', color: 'white'}}>:</td>
-                                    <td style={{textAlign: 'left', color: 'white'}}>{singleDoc.Area}</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Location</td>
+                                    <td style={{width: '40px', color: '#54B2E9'}}>:</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Area}</td>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: 'white'}}>Date</td>
-                                    <td style={{width: '40px', color: 'white'}}>:</td>
-                                    <td style={{textAlign: 'left', color: 'white'}}>xxx</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Date</td>
+                                    <td style={{width: '40px', color: '#54B2E9'}}>:</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>xxx</td>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: 'white'}}>Time</td>
-                                    <td style={{width: '40px', color: 'white'}}>:</td>
-                                    <td style={{textAlign: 'left', color: 'white'}}>{singleDoc.Time}<span> PM</span></td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Time</td>
+                                    <td style={{width: '40px', color: '#54B2E9'}}>:</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Time}<span> PM</span></td>
                                 </tr>
                             </tbody>
                         </table>

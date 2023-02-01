@@ -10,9 +10,9 @@ const HomePage = () => {
                 
                     <div style={{display: 'flex', flexDirection: 'column', height: '70%', width: '100%'}}>
 
-                    <Link to={{pathname:"/adminlogin"}}>
-                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height:'50vh'}}>
-                                <img src= {Logo} alt="Logo" style={{width: '150px', marginTop: '60px', marginBottom: '100px'}}/>
+                        <Link to={{pathname:"/adminlogin"}}>
+                            <div style={{display: 'flex', width: '100vw', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', height:'40%'}}>
+                                <img src= {Logo} alt="Logo" style={{width: '70px', margin: '60px', marginRight: '20px'}}/>
                             </div>
                         </Link>
 
@@ -20,7 +20,7 @@ const HomePage = () => {
 
                     <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '30%', width: '100%'}}>
                         <Link to={{pathname:"/choosedate"}}>
-                            <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}}>Click to Enter</button>
+                            <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundColor:'#54B2E9', color: 'white', fontSize: '25px'}}>Click to Enter</button>
                         </Link>
                     </div>
                 </div>

@@ -10,10 +10,10 @@ const Success = () =>{
             
             <div style={{display: 'flex', flexDirection: 'column', height: '100%', width: '100%'}}>
                 
-                <div style={{display: 'flex', flexDirection: 'column', height: '62%', width: '100%'}}>
+                <div style={{display: 'flex', flexDirection: 'column', height: '67%', width: '100%'}}>
                 </div>
 
-                <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '38%', width: '100%'}}>
+                <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
                     <h1 style={{fontSize: '20px', color: 'white', fontWeight: '500'}}>Booking Details</h1>
 
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '400px'}}>

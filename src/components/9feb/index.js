@@ -511,8 +511,7 @@ const TimeSlot = () => {
 
                 </div>
 
-                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} nClick= {() => HandleSubmit()} >Next</button>
-                <button className="grab" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'white', backgroundColor: 'black'}} onClick= {() => HandleSubmit()} >Next</button>
+                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} onClick= {() => HandleSubmit()} >Next</button>
 
  
             </div>

@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
       <Routes>
-          <Route exact path="/" element={<ChooseDate />} />
+          <Route exact path="/" element={<HomePage />} />
 
           <Route path="/9feb" element={<NineFeb />} />
           <Route path="/Date/:id" element={<TenFeb />} />
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/Registration" element={<Registration/>} />
           <Route path="/AdminPanel" element={<AdminPanel/>} />
           <Route path="/AdminLogin" element={<AdminLogin/>} />
-          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/choosedate" element={<ChooseDate />} />
           <Route path="/:id" element={<Registration/>} />
 
           {/* <Route path="/User/:id" element={<TimeSlot />} /> */}

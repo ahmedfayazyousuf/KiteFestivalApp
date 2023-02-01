@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const HomePage = () => { 
 
@@ -11,7 +12,9 @@ const HomePage = () => {
                     </div>
 
                     <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '30%', width: '100%'}}>
-                        <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}}>Click to Enter</button>
+                        <Link to={{pathname:"/choosedate"}}>
+                            <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}}>Click to Enter</button>
+                        </Link>
                     </div>
                 </div>
                 

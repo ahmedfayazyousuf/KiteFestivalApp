@@ -80,6 +80,8 @@ const Registration = () =>{
             Time:time,
             Area:area,
             Date:date,
+            Status: "-",
+            KiteStatus: "-",
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {
@@ -173,6 +175,7 @@ const Registration = () =>{
 
         
     }
+    
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}} >
 

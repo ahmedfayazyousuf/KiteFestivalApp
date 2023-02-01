@@ -6,7 +6,7 @@ import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import {useRef} from 'react';
 import axios from "axios";
-
+import { Link } from "react-router-dom";
 import {useLocation} from 'react-router-dom';
 
 const Registration = () =>{
@@ -222,7 +222,9 @@ const Registration = () =>{
 
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row',gap:"20px"}}>                    
-                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                        <Link to={{pathname:`/Date/${location.state.date}`}}>              
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                        </Link>
                         <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>Submit</button>
                     </div>
                 </div>

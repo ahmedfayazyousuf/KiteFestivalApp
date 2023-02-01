@@ -5,6 +5,7 @@ import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const TimeSlot = () => {
     // eslint-disable-next-line 
@@ -778,7 +779,15 @@ const TimeSlot = () => {
                     </div>
 
                 </div>
-                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}}  onClick= {() => HandleSubmit()}>Next</button>
+
+
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', gap:"20px", marginTop: '20px'}}>      
+                        <Link to={{pathname:'/choosedate'}}>              
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                        </Link>
+                                    
+                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>Submit</button>
+                    </div>
         </div>
     )
 }

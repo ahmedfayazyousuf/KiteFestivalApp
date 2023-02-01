@@ -102,7 +102,9 @@ const TimeSlot = () => {
         console.log()
 
         if(e === 'areaone4:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
+            
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
             document.getElementById('areaone7:30').style.background = "transparent";
@@ -113,12 +115,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areaone4:30');
         }
 
         if(e === 'areaone5:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
             document.getElementById('areaone7:30').style.background = "transparent";
@@ -129,12 +143,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areaone5:30');
         }
 
         if(e === 'areaone6:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone7:30').style.background = "transparent";
@@ -145,12 +171,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areaone6:30');
         }
 
         if(e === 'areaone7:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -161,12 +199,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areaone7:30');
         }
 
         if(e === 'areaone8:30'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -177,12 +227,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areaone8:30');
         }
 
         if(e === 'areatwo5'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -193,12 +255,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areatwo5');
         }
 
         if(e === 'areatwo6'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -209,12 +283,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areatwo6');
         }
 
         if(e === 'areatwo7'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -225,12 +311,24 @@ const TimeSlot = () => {
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
 
             setTime('areatwo7');
         }
 
         if(e === 'areatwo8'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -242,11 +340,23 @@ const TimeSlot = () => {
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo9').style.background = "transparent";
 
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo9').style.color = "black";
+
             setTime('areatwo8');
         }
 
         if(e === 'areatwo9'){
-            document.getElementById(e).style.background = "rgb(200, 197, 197)";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -257,6 +367,17 @@ const TimeSlot = () => {
             document.getElementById('areatwo6').style.background = "transparent";
             document.getElementById('areatwo7').style.background = "transparent";
             document.getElementById('areatwo8').style.background = "transparent";
+
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone6:30').style.color = "black";
+            document.getElementById('areaone7:30').style.color = "black";
+            document.getElementById('areaone8:30').style.color = "black";
+
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+            document.getElementById('areatwo8').style.color = "black";
 
             setTime('areatwo9');
         }

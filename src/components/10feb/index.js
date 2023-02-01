@@ -104,7 +104,7 @@ const TimeSlot = () => {
         console.log()
 
         if(e === 'areaone12:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )"; 
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone1:30').style.background = "transparent";
             document.getElementById('areaone2:30').style.background = "transparent";

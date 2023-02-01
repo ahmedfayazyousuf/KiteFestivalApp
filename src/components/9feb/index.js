@@ -1,4 +1,4 @@
-import './User.css';
+
 import firebase from '../../firebase'
 import { useState } from "react"
 import GetReady from '../getready.png';

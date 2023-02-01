@@ -196,19 +196,19 @@ const Registration = () =>{
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
                         <label style={{color:"#54B2E9", fontWeight:"400"}}>Name</label>
-                        <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }}/> 
+                        <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }}/> 
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
                         <label style={{color:"#54B2E9", fontWeight:"400"}}>Email</label>
-                        <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }} />
+                        <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }} />
                     </div>
 
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                            <label style={{color:"#54B2E9", fontWeight:"400"}}>Mobile</label>
-                            <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"rgba(0,0,0,0.5" }} />
+                            <label style={{color:"#54B2E9", fontWeight:"400"}}>Mobile (+971 xx xxx xxxx)</label>
+                            <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }} />
                         </div>
                     </div>
 

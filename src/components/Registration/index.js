@@ -5,6 +5,7 @@ import '../All.css';
 import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import {useRef} from 'react';
+import axios from "axios";
 
 import {useLocation} from 'react-router-dom';
 
@@ -87,8 +88,19 @@ const Registration = () =>{
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {
+            var area = location.state.time.slice(0,7)
+            var time = location.state.time.slice(7)
 
             const kites = firebase.firestore().collection("Kites").doc(`${location.state.date}`);
+            console.log(location.state.date, time)
+
+            const name = document.getElementById("Name").value
+
+            const number = document.getElementById("no").value
+
+            var date = location.state.date;
+
+
 
             if(area === 'areaone'){
                 var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
@@ -102,10 +114,13 @@ const Registration = () =>{
                         }
                     }
 
-                    if(kites<=0){
+                    if(data.kites<=0){
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
+                        axios.post("http://localhost:4000/send_sms", {
+                        name, date, time, number
+                        })
                         return;
                     }
 
@@ -113,6 +128,9 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
+                    axios.post("http://localhost:4000/send_sms", {
+                        name, date, time, number
+                        })
                     
                 })
             }
@@ -129,10 +147,13 @@ const Registration = () =>{
                         }
                     }
 
-                    if(kites<=0){
+                    if(data.kites<=0){
                         await timeslot.update({
                             slots: firebase.firestore.FieldValue.increment(-1)
                         });
+                        axios.post("http://localhost:4000/send_sms", {
+                                           name, date, time, number
+                                         })
                         return;
                     }
 
@@ -140,6 +161,9 @@ const Registration = () =>{
                         kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
+                    axios.post("http://localhost:4000/send_sms", {
+                        name, date, time, number
+                        })
                 })
             }
 

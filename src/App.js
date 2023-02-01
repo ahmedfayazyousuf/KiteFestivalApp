@@ -21,7 +21,7 @@ const App = () => {
       <Routes>
           <Route exact path="/" element={<ChooseDate />} />
 
-          <Route path="/Date/9feb" element={<NineFeb />} />
+          <Route path="/9feb" element={<NineFeb />} />
           <Route path="/Date/:id" element={<TenFeb />} />
 
           <Route path="/Registration" element={<Registration/>} />

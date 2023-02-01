@@ -12,6 +12,7 @@ const Registration = () =>{
     const navigate = useNavigate();
     const location = useLocation();
     const buttonRef = useRef(null);
+    // const { user_id } = useParams();
 
     const [count, setCount] = useState(0);
     const [emailB, setEmailB] = useState(false);

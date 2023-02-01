@@ -402,34 +402,34 @@ const TimeSlot = () => {
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         4:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone4:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone4:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
 
 
                     <button className="grab" id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone5:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone5:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone6:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone6:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areaone7:30" onClick={() => {Handleclick("areaone7:30")}} value="7:30 PM - 8:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         7:30 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone7:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone7:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areaone8:30" onClick={() => {Handleclick("areaone8:30")}} value="8:30 PM - 9:30 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         8:30 PM 
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areaone8:30k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areaone8:30s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 
@@ -439,34 +439,34 @@ const TimeSlot = () => {
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         5:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo5k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo5s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         6:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo6k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo6s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         7:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo7k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo7s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 
                 <div className="slotdiv" style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     <button className="grab" id="areatwo8" onClick={() => {Handleclick("areatwo8")}} value="8 PM - 9 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         8:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo8k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo8s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                     
                     <button className="grab" id="areatwo9" onClick={() => {Handleclick("areatwo9")}} value="9 PM - 10 PM" style={{width:"150px", margin: '10px', borderRadius: '5px', padding: '10px', color: 'black', backgroundColor: 'transparent', border:'1px solid black'}}>
                         9:00 PM
-                        <p><em style={{color: 'grey', }}>x kites available</em></p>
-                        <p><em style={{color: 'grey', }}>x slots available</em></p>
+                        <p id="areatwo9k"><em style={{color: 'grey', }}>x kites available</em></p>
+                        <p id="areatwo9s"><em style={{color: 'grey', }}>x slots available</em></p>
                     </button>
                 </div>
 

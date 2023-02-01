@@ -6,7 +6,6 @@
 }
 
 body, html{
-  /* background-image: url("./desktop2.png"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -42,15 +41,15 @@ body, html{
   flex-wrap: wrap;
   flex: 1;
   min-width: 140px;
-  background-image: linear-gradient(#ffffff 20%, #8afcf2 );
-  border: none;
+  border: 1px solid #54B2E9;
   border-radius: 10px;
   transition: all .3s ease;
   cursor: -webkit-grab; 
   cursor: grab;
 }
 .content-1:hover{
-  background-image: linear-gradient(#0031CC 50%, #0180F1 );
+  background-color: #54B2E9;
+  color: white;
 }
 .content-1:hover a{
   color: rgb(200, 197, 197);

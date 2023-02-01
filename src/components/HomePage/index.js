@@ -1,3 +1,4 @@
+import Logo from './admin.png'
 import { Link } from "react-router-dom";
 
 const HomePage = () => { 
@@ -9,6 +10,12 @@ const HomePage = () => {
                 
                     <div style={{display: 'flex', flexDirection: 'column', height: '70%', width: '100%'}}>
 
+                    <Link to={{pathname:"/adminlogin"}}>
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height:'50vh'}}>
+                                <img src= {Logo} alt="Logo" style={{width: '150px', marginTop: '60px', marginBottom: '100px'}}/>
+                            </div>
+                        </Link>
+
                     </div>
 
                     <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '30%', width: '100%'}}>
@@ -17,8 +24,6 @@ const HomePage = () => {
                         </Link>
                     </div>
                 </div>
-                
-        
             </div>
 
               

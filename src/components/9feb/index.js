@@ -102,7 +102,7 @@ const TimeSlot = () => {
         console.log()
 
         if(e === 'areaone4:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -131,7 +131,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areaone5:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone6:30').style.background = "transparent";
@@ -159,7 +159,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areaone6:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -187,7 +187,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areaone7:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -215,7 +215,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areaone8:30'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -243,7 +243,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areatwo5'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -271,7 +271,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areatwo6'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -299,7 +299,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areatwo7'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -327,7 +327,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areatwo8'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -355,7 +355,7 @@ const TimeSlot = () => {
         }
 
         if(e === 'areatwo9'){
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9"
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
@@ -388,7 +388,7 @@ const TimeSlot = () => {
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper2.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}} >
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%', marginTop: '15px'}}>
-                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', marginBottom: '20px'}} >
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', marginBottom: '20px'}} >
                     <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >ACTIVITY AREA 1</p>
                 </div>
                 
@@ -449,7 +449,7 @@ const TimeSlot = () => {
 
                 </div>
 
-                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', marginBottom: '20px', marginTop: '50px'}} >
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', marginBottom: '20px', marginTop: '50px'}} >
                     <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >ACTIVITY AREA 2</p>
                 </div>
 
@@ -511,7 +511,7 @@ const TimeSlot = () => {
 
                 </div>
 
-                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} onClick= {() => HandleSubmit()} >Next</button>
+                <button style={{marginTop: '20px', cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} onClick= {() => HandleSubmit()} >Next</button>
 
  
             </div>

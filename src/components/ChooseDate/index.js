@@ -25,22 +25,22 @@ const ChooseDate = () => {
 
         if(e === '9feb'){
             setDate('/9feb');
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
-            document.getElementById('10feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('11feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('12feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
+            document.getElementById('10feb').style.background="transparent";
+            document.getElementById('11feb').style.background="transparent";
+            document.getElementById('12feb').style.background="transparent";
             document.getElementById('10feb').style.color = "black";
             document.getElementById('11feb').style.color = "black";
             document.getElementById('12feb').style.color = "black";
         }
         if(e === '10feb'){
             setDate('/Date/10feb');
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
-            document.getElementById('9feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('11feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('12feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
+            document.getElementById('9feb').style.background="transparent";
+            document.getElementById('11feb').style.background="transparent";
+            document.getElementById('12feb').style.background="transparent";
             document.getElementById('9feb').style.color = "black";
             document.getElementById('11feb').style.color = "black";
             document.getElementById('12feb').style.color = "black";
@@ -48,11 +48,11 @@ const ChooseDate = () => {
 
         if(e === '11feb'){
             setDate('/Date/11feb');
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
-            document.getElementById('9feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('10feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('12feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
+            document.getElementById('9feb').style.background="transparent";
+            document.getElementById('10feb').style.background="transparent";
+            document.getElementById('12feb').style.background="transparent";
             document.getElementById('9feb').style.color = "black";
             document.getElementById('10feb').style.color = "black";
             document.getElementById('12feb').style.color = "black";
@@ -60,11 +60,11 @@ const ChooseDate = () => {
 
         if (e === '12feb'){
             setDate('/Date/12feb');
-            document.getElementById(e).style.backgroundImage = "linear-gradient(#0031CC 50%, #0180F1 )";
+            document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
-            document.getElementById('9feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('10feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
-            document.getElementById('11feb').style.backgroundImage = "linear-gradient(#ffffff 20%, #8afcf2 )";
+            document.getElementById('9feb').style.background="transparent";
+            document.getElementById('10feb').style.background="transparent";
+            document.getElementById('11feb').style.background="transparent";
             document.getElementById('9feb').style.color = "black";
             document.getElementById('10feb').style.color = "black";
             document.getElementById('11feb').style.color = "black";
@@ -75,7 +75,7 @@ const ChooseDate = () => {
     return (
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper2.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}} >
 
-            <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', marginBottom: '20px'}} >
+            <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', marginBottom: '20px'}} >
                 <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >SELECT A DATE</p>
             </div>
 
@@ -109,7 +109,7 @@ const ChooseDate = () => {
 
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh'}} >
-                <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundImage: 'linear-gradient(#0031CC 50%, #0180F1 )', color: 'white', fontSize: '25px'}} variant="contained" onClick= {() => Handleclick()}>Next</button> 
+                <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick= {() => Handleclick()}>Next</button> 
             </div>
 
               

@@ -11,8 +11,8 @@ const HomePage = () => {
                     <div style={{display: 'flex', flexDirection: 'column', height: '70%', width: '100%'}}>
 
                         <Link to={{pathname:"/adminlogin"}}>
-                            <div style={{display: 'flex', width: '100vw', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', height:'40%'}}>
-                                <img src= {Logo} alt="Logo" style={{width: '70px', margin: '60px', marginRight: '20px'}}/>
+                            <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', height:'40%'}}>
+                                <img src= {Logo} alt="Logo" style={{width: '70px', marginTop: '60px', marginRight: '20px'}}/>
                             </div>
                         </Link>
 

@@ -9,8 +9,10 @@ const AdminLogin = () =>{
         firebase.firestore().collection("Users").get().then((snapshot) => {
             if(snapshot.docs.length>0){
                 snapshot.docs.forEach((doc)=>{
+                    var data = doc.data()
+                    data.id = doc.id
                     setAllDocs((prev)=>{
-                        return[...prev,doc.data()];
+                        return[...prev,data];
                     });
                 });
             }   
@@ -19,13 +21,30 @@ const AdminLogin = () =>{
     },[]);
 
 
-    function Attended() {
+    async function Attended(id) {
         // change user status to 'attended' on button click onClick function - firebase document update
+
+        await firebase.firestore().collection("Users").doc(id).update({
+            Status:"Attended"
+        })
+
+        document.getElementById(`S${id}`).innerHTML = "Attended"
+        console.log(`S${id}`)
+
+
+
     }
 
 
-    function Returned() {
+    async function Returned(id) {
         // change kite status to 'returned' on button click onClick function - firebase document update
+        await firebase.firestore().collection("Users").doc(id).update({
+            KiteStatus:"Returned"
+        })
+
+        console.log(`K${id}`)
+
+        document.getElementById(`K${id}`).innerHTML = "Returned"
     }
 
     return(
@@ -44,20 +63,20 @@ const AdminLogin = () =>{
                     <tbody>
                     {allDocs.map((doc) => (
                             // set key to document id this is incorrect
-                            <tr key={doc._id} style={{textAlign: 'center'}}>
+                            <tr key={doc.id} style={{textAlign: 'center'}}>
 
                                 <td>{doc.Name}</td>
                                 <td>{doc.Time}<span> PM</span></td>                     
                                 
                                 {/* change user status to 'attended' on button click */}
-                                <td>{doc.Status}</td>
+                                <td id = {"S"+ doc.id} >{doc.Status}</td>
                                 
                                 {/* change kite status to 'returned' on button click */}
-                                <td>{doc.KiteStatus}</td> 
+                                <td id = {"K"+ doc.id}>{doc.KiteStatus}</td> 
 
                                 <td>
-                                    <button style={{backgroundColor: 'black', color: 'white', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Attended()}}>Attended</button>
-                                    <button style={{backgroundColor: 'black', color: 'white', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Returned()}}>Returned</button>
+                                    <button style={{backgroundColor: 'black', color: 'white', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Attended(doc.id)}}>Attended</button>
+                                    <button style={{backgroundColor: 'black', color: 'white', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Returned(doc.id)}}>Returned</button>
                                 </td>
                             </tr>
                         ))}

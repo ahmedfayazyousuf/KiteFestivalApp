@@ -16,6 +16,7 @@ const Registration = () =>{
 
     const [count, setCount] = useState(0);
     const [emailB, setEmailB] = useState(false);
+    const [select, setSelect] = useState('')
 
     function onlyOnetwo(e) {
         var checkm = document.getElementById('checkmd');
@@ -28,6 +29,7 @@ const Registration = () =>{
             console.log("lol")
             
             checkf.checked = false
+            setSelect("Yes")
             
             // setUser({...user, [firstname]:value})
         }
@@ -36,6 +38,7 @@ const Registration = () =>{
             console.log("lil")
             
             checkm.checked = false
+            setSelect("No")
 
             // setUser({...user, [firstname]:value})
         }
@@ -100,29 +103,49 @@ const Registration = () =>{
 
 
             if(area === 'areaone'){
-                var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
+
+                if(select === "Yes"){
+                    var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
+                    timeslot.get().then(async (doc)=>{
+                        console.log(doc.data())
+                        var data = doc.data() 
+    
+                        if(data.kites <= 0){
+                            if(data.slots <=0){
+                                return;
+                            }
+                        }
+    
+                        if(data.kites<=0){
+                            await timeslot.update({
+                                slots: firebase.firestore.FieldValue.increment(-1)
+                            });
+                            axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
+                            name, date, time, number
+                            })
+                            return;
+                        }
+    
+                        await timeslot.update({
+                            kites: firebase.firestore.FieldValue.increment(-1),
+                            slots: firebase.firestore.FieldValue.increment(-1)
+                        });
+                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
+                            name, date, time, number
+                            })
+                        
+                    })
+                }else{
+                    var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
                 timeslot.get().then(async (doc)=>{
                     console.log(doc.data())
                     var data = doc.data() 
 
-                    if(data.kites <= 0){
                         if(data.slots <=0){
                             return;
                         }
-                    }
-
-                    if(data.kites<=0){
-                        await timeslot.update({
-                            slots: firebase.firestore.FieldValue.increment(-1)
-                        });
-                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
-                        name, date, time, number
-                        })
-                        return;
-                    }
 
                     await timeslot.update({
-                        kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
                     axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
@@ -130,32 +153,54 @@ const Registration = () =>{
                         })
                     
                 })
+                }
             }
 
             if(area === 'areatwo'){
-                var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
+
+                if(select === "Yes"){
+                    var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
+                    timeslot.get().then(async (doc)=>{
+                        console.log(doc.data())
+                        var data = doc.data() 
+    
+                        if(data.kites <= 0){
+                            if(data.slots <=0){
+                                return;
+                            }
+                        }
+                        if(data.kites<=0){
+                            await timeslot.update({
+                                slots: firebase.firestore.FieldValue.increment(-1)
+                            });
+                            axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
+                            name, date, time, number
+                            })
+                            return;
+                        }
+    
+                        await timeslot.update({
+                            kites: firebase.firestore.FieldValue.increment(-1),
+                            slots: firebase.firestore.FieldValue.increment(-1)
+                        });
+                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
+                            name, date, time, number
+                            })
+                        
+                    })
+                }
+                else{
+                    var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
                 timeslot.get().then(async (doc)=>{
                     console.log(doc.data())
                     var data = doc.data() 
 
-                    if(data.kites <= 0){
                         if(data.slots <=0){
                             return;
                         }
-                    }
 
-                    if(data.kites<=0){
-                        await timeslot.update({
-                            slots: firebase.firestore.FieldValue.increment(-1)
-                        });
-                        axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
-                        name, date, time, number
-                        })
-                        return;
-                    }
 
                     await timeslot.update({
-                        kites: firebase.firestore.FieldValue.increment(-1),
                         slots: firebase.firestore.FieldValue.increment(-1)
                     });
                     axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
@@ -163,6 +208,8 @@ const Registration = () =>{
                         })
                     
                 })
+                }
+                
             }
 
             

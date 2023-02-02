@@ -1,4 +1,5 @@
 import './User.css';
+import { Link } from "react-router-dom";
 // import activityarea2Logo from '../activityarea2logo.png';
 import GetReady from '../getready.png';
 // eslint-disable-next-line
@@ -108,7 +109,10 @@ const ChooseDate = () => {
             </div>
 
 
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh'}} >
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center',gap:"20px", alignItems: 'center', marginTop:'3vh'}} >
+                <Link to={{pathname:"/"}}>              
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                </Link>
                 <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick= {() => Handleclick()}>Next</button> 
             </div>
 

@@ -258,7 +258,7 @@ const Registration = () =>{
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                            <label style={{color:"#54B2E9", fontWeight:"400"}}>MOBILE (+971 xx xxx xxxx)</label>
+                            <label style={{color:"#54B2E9", fontWeight:"400"}}>MOBILE (971 xx xxx xxxx)</label>
                             <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }} />
                         </div>
                     </div>

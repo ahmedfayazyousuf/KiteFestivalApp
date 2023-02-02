@@ -51,14 +51,14 @@ const AdminLogin = () =>{
     return(
         <div style={{display: 'flex', justifyContent: 'center', flexDirection:"column", alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
             <div style={{display:"flex", flexDirection:"column", width:"100%", height: "70%", justifyContent:"center", alignItems:"center", overflowY: 'scroll'}}>
-                <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%'}}>
+                <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '100%'}}>
                     <thead>
                         <tr>
-                            <td>Name</td>
-                            <td>Time</td>
-                            <td>Status</td>
-                            <td>Attendance</td>
-                            <td>Kite Status</td>
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Attendance</th>
+                            <th>Kite Status</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -21,9 +21,13 @@ body, html{
     font-family: myFont;
     src:url(kin.otf);
 }
-h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th{
+h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th, select, option{
     font-family: myFont;
 }
+
+tr:nth-child(even) {  
+    background-color: #ffffff;  
+  } 
 
 
 /* html{

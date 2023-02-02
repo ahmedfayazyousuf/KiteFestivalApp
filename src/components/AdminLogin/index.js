@@ -9,7 +9,7 @@ const AdminLogin = () =>{
         var User = document.getElementById("Name").value
         var Pass = document.getElementById("password").value
 
-        if(User === "admin" && Pass === "Techy@4141"){
+        if(User === "admin" || User === "Admin" && Pass === "admin123"){
             navigate("/AdminPanel")
         }
     }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import '../All.css'; 
 import { useEffect, useState } from 'react';
@@ -49,7 +50,7 @@ const AdminLogin = () =>{
 
     return(
         <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}}>
-            <div style={{display:"flex", flexDirection:"column", width:"100%", height: "80%", justifyContent:"center", alignItems:"center", overflowY: 'scroll'}}>
+            <div style={{display:"flex", flexDirection:"column", width:"100%", height: "70%", justifyContent:"center", alignItems:"center", overflowY: 'scroll'}}>
                 <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%'}}>
                     <thead>
                         <tr>
@@ -82,6 +83,10 @@ const AdminLogin = () =>{
                         ))}
                     </tbody>
                 </table>
+
+                <Link to={{pathname:`/`}}>              
+                    <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '40px'}} variant="contained">RETURN</button>
+                </Link>
             </div>
         </div>
     )

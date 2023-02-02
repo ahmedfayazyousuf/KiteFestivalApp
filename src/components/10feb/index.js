@@ -651,6 +651,13 @@ const TimeSlot = () => {
                         </div> 
                     </div>                  
                     
+                     
+
+                </div>
+
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone3:30" onClick={() => {Handleclick("areaone3:30")}} value="3:30 PM - 4:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
@@ -659,12 +666,7 @@ const TimeSlot = () => {
                                 <p id="areaone3:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
                             </button>
                         </div>
-                    </div>  
-
-                </div>
-
-
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                    </div> 
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
@@ -686,7 +688,7 @@ const TimeSlot = () => {
                         </div> 
                         </div>                 
                     
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                    {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 6:30 PM
@@ -694,7 +696,7 @@ const TimeSlot = () => {
                                 <p id="areaone6:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
                             </button>
                         </div>
-                    </div>    
+                    </div>     */}
 
                 </div>
 
@@ -714,7 +716,7 @@ const TimeSlot = () => {
                         </div> 
                     </div>                 
                     
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                    {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo2" onClick={() => {Handleclick("areatwo2")}} value="2 PM - 3 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 2:00 PM
@@ -722,7 +724,7 @@ const TimeSlot = () => {
                                 <p id="areatwo2s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
                             </button>
                         </div> 
-                    </div>                 
+                    </div>                  */}
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>

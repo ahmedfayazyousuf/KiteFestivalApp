@@ -476,7 +476,7 @@ const TimeSlot = () => {
                         </div>
                     </div>
                     
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                    {/* <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 7:00 PM
@@ -484,7 +484,7 @@ const TimeSlot = () => {
                                 <p id="areatwo7s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 

@@ -20,7 +20,7 @@ const HomePage = () => {
 
                     <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '30%', width: '100%'}}>
                         <Link to={{pathname:"/choosedate"}}>
-                            <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundColor:'#54B2E9', color: 'white', fontSize: '25px'}}>Click to Enter</button>
+                            <button style={{cursor: 'grab', width: '250px', height: '50px', border: 'none', borderRadius: '10px', backgroundColor:'#54B2E9', color: 'white', fontSize: '25px', marginTop: '90px'}}>Click to Enter</button>
                         </Link>
                     </div>
                 </div>

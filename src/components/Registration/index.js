@@ -260,7 +260,7 @@ const Registration = () =>{
                     </div>
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column', marginBottom: '30px'}}>
-                        <label style={{color:"#54B2E9", fontWeight:"400"}}>KITE ASSIGNED</label>
+                        <label style={{color:"#54B2E9", fontWeight:"400", marginBottom: '10px'}}>KITE ASSIGNED</label>
                         <div style={{display:"flex",flexDirection:"row"}}>  
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginLeft:'80px', marginRight: '10px',background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>

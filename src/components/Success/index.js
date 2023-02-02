@@ -27,9 +27,9 @@ const Success = () => {
                 </div>
 
                 <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
-                    <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500'}}>BOOKING DETAILS</h1>
+                    <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500', marginBottom: '20px'}}>BOOKING DETAILS</h1>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '400px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '250px'}}>
 
                         <table>
                             <tbody>

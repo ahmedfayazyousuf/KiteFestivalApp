@@ -267,7 +267,7 @@ const Registration = () =>{
                         <label style={{color:"#54B2E9", fontWeight:"400", marginBottom: '10px'}}>KITE ASSIGNED</label>
                         <div style={{display:"flex",flexDirection:"row"}}>  
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
-                            <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginLeft:'80px', marginRight: '10px',background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
+                            <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginLeft:'80px', marginRight: '10px'}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
                         </div>
                     </div>
 

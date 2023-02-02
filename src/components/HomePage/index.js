@@ -11,10 +11,10 @@ const HomePage = () => {
                     <div style={{display: 'flex', flexDirection: 'column', height: '70%', width: '100%'}}>
 
                         
-                            <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'right', alignItems: 'center', height:'40%'}}>
-                            <Link to={{pathname:"/adminlogin"}}>
-                                <img src= {Logo} alt="Logo" style={{width: '70px', marginTop: '60px', marginRight: '20px'}}/>
-                            </Link>
+                            <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'right', alignItems: 'center', height:'10vh'}}>
+                                <Link to={{pathname:"/adminlogin"}}>
+                                    <img src= {Logo} alt="Logo" style={{width: '70px', marginTop: '20px', marginRight: '20px'}}/>
+                                </Link>
                             </div>
 
                     </div>

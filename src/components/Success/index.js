@@ -18,6 +18,23 @@ const Success = () => {
         console.log(singleDoc)
     },[]);
 
+    var date = location.state.date.slice(0,2)
+    var time = location.state.time.slice(7)
+
+    if( location.state.date === "9feb"){
+        date = location.state.date.slice(0,1)
+    }
+
+    var area = location.state.area
+
+    if(area === "areaone"){
+        area = "Area 1"
+    }
+    else{
+        area = "Area 2"
+    }
+
+
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper4.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}}>
             
@@ -41,12 +58,12 @@ const Success = () => {
                                 <tr>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>LOCATION</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.area}</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{area}</td>
                                 </tr>
-                                <tr>
+                                <tr>  
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>DATE</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.date}</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{date} FEB</td>
                                 </tr>
                                 <tr>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>TIME</td>

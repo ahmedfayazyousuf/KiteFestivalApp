@@ -205,7 +205,7 @@ const Registration = () =>{
                     });
                     axios.post("https://kitefestivalserver.azurewebsites.net/send_sms", {
                         name, date, time, number
-                        })
+                    })
                     
                 })
                 }

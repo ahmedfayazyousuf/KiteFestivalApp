@@ -24,7 +24,19 @@ const AdminLogin = () =>{
     }
 
     function datefilter(){
+        var body = document.getElementById("tbody").childNodes
 
+        for(var i = 0; i < body.length; i++){
+
+            body[i].style.display = "none"; // depending on what you're doing
+        }
+
+        var time = document.getElementById("date")
+        var timeSelected = time.options[time.selectedIndex].value;
+        var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+        for(var i = 0; i < divsToHide.length; i++){
+            divsToHide[i].style.display = "table-row"; // depending on what you're doing
+        }
     }
 
     useEffect(() => {
@@ -69,6 +81,10 @@ const AdminLogin = () =>{
         document.getElementById(`K${id}`).innerHTML = "Returned"
     }
 
+    function locationfilter() {
+
+    }
+
 
 
 
@@ -77,6 +93,16 @@ const AdminLogin = () =>{
             {/* <button onClick={filter}>lol</button> */}
 
             <div style={{display: 'flex', width: '90%', marginBottom: '12px', marginTop: '20px'}}>
+
+                <select name="time" id="date" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                    <option selected disabled value="">DATE</option>
+                    <option value="9feb">9 - FEB</option>
+                    <option value="10feb">10 - FEB</option>
+                    <option value="11feb">11 - FEB</option>
+                    <option value="12feb">12 - FEB</option>
+                </select>
+
+
                 <select name="time" id="time" type="text" required onChange={()=>{timefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">TIME</option>
                     <option value="12:30">12:30 PM</option>
@@ -100,24 +126,12 @@ const AdminLogin = () =>{
                     <option value="9:30">9:30 PM</option>
                 </select>
 
-                <select name="time" id="time" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
-                    <option selected disabled value="">DATE</option>
-                    <option value="9feb">9 - FEB</option>
-                    <option value="10feb">10 - FEB</option>
-                    <option value="11feb">11 - FEB</option>
-                    <option value="12feb">12 - FEB</option>
-                </select>
+                
 
-                <select name="time" id="time" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
-                    <option selected disabled value="">ATTENDANCE</option>
-                    <option value="Attended">ATTENDED</option>
-                    <option value="-">NOT ATTENDED</option>
-                </select>
-
-                <select name="time" id="time" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', padding: '5px'}}>
-                    <option selected disabled value="">KITE STATUS</option>
-                    <option value="Returned">RETURNED</option>
-                    <option value="-">NOT RETURNED</option>
+                <select name="time" id="time" type="text" required onClick={()=>{locationfilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                    <option selected disabled value="">LOCATION</option>
+                    <option value="areaone">ACTIVITY AREA 1</option>
+                    <option value="areatwo">ACTIVITY AREA 2</option>
                 </select>
 
                 <Link to={{pathname:"/adminlogin"}}>
@@ -130,7 +144,7 @@ const AdminLogin = () =>{
                     <thead>
                         <tr style ={{border: '1px solid black'}}>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NAME</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>TIME</th>
+                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NUMBER</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
@@ -142,7 +156,7 @@ const AdminLogin = () =>{
                             <tr key={doc.id } className= {doc.Date+ " " + doc.Time} style={{textAlign: 'center'}} >
 
                                 <td>{doc.Name}</td>
-                                <td>{doc.Time}<span> PM</span></td>                     
+                                <td>{doc.Number}</td>                   
                                 
                                 <td id = {"S"+ doc.id} >{doc.Status}</td>
                                 

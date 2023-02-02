@@ -1,10 +1,12 @@
 import firebase from '../../firebase';
 import '../All.css'; 
 import { useEffect, useState } from 'react';
+import {useLocation} from 'react-router-dom';
 
 const Success = () => {
     const [Users, setUsers] = useState([]);
     const [singleDoc, setSingleDoc] = useState({});
+    const location = useLocation();
     
     useEffect(() => {
         firebase.firestore().collection("Users").doc("8Bz1aKrijtXJMdj7n1mO").get().then((snapshot) => {
@@ -33,22 +35,22 @@ const Success = () => {
                                 <tr>
                                     <th style={{textAlign: 'left', color: '#54B2E9'}}>Name</th>
                                     <th style={{width: '40px', color: '#54B2E9'}}>:</th>
-                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Name}</th>
+                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.name}</th>
                                 </tr>
                                 <tr>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>Location</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Area}</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.area}</td>
                                 </tr>
                                 <tr>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>Date</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>xxx</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.date}</td>
                                 </tr>
                                 <tr>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>Time</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{singleDoc.Time}<span> PM</span></td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.time}<span> PM</span></td>
                                 </tr>
                             </tbody>
                         </table>

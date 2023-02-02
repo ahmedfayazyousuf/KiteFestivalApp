@@ -214,7 +214,7 @@ const Registration = () =>{
 
             
             console.log("Document written with ID: ", docRef.id);
-            navigate("/Success",{state:{uid:docRef.id,count:0}});
+            navigate("/Success",{state:{uid:docRef.id,count:0, name:name, area:area, date:date, time:time}});
         })
         .catch(function(error) {
             console.error("Error adding document: ", error);
@@ -224,6 +224,15 @@ const Registration = () =>{
         
     }
     
+    var date = location.state.date.slice(0,2)
+    var time = location.state.time.slice(7)
+
+    if( location.state.date === "9feb"){
+        date = location.state.date.slice(0,1)
+    }
+
+
+    
     return(
         <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}} >
 
@@ -232,13 +241,8 @@ const Registration = () =>{
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '400px', gap:'10px', alignItems: 'center'}}>
 
-
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'left', width: '100%'}}>
-                        <h1 style={{fontSize:'20px', color: '#54B2E9'}}>BOOKING FOR: x Month Time PM, 2023</h1>
-                    </div>
-
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'left', width: '100%'}}>
-                        <h1 style={{fontSize:'20px', color: '#54B2E9'}}>BOOKING FOR: 9 FEB - 4.30 PM, 2023</h1>
+                        <h1 style={{fontSize:'20px', color: '#54B2E9'}}>BOOKING FOR: {date} FEB -  {time} PM, 2023</h1>
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>

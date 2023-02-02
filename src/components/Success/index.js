@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import '../All.css'; 
 import { useEffect, useState } from 'react';
@@ -26,35 +27,41 @@ const Success = () => {
                 </div>
 
                 <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
-                    <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500'}}>Booking Details</h1>
+                    <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500'}}>BOOKING DETAILS</h1>
 
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '400px'}}>
 
                         <table>
                             <tbody>
                                 <tr>
-                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>Name</th>
+                                    <th style={{textAlign: 'left', color: '#54B2E9'}}>NAME</th>
                                     <th style={{width: '40px', color: '#54B2E9'}}>:</th>
                                     <th style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.name}</th>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Location</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>LOCATION</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.area}</td>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Date</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>DATE</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.date}</td>
                                 </tr>
                                 <tr>
-                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>Time</td>
+                                    <td style={{textAlign: 'left', color: '#54B2E9'}}>TIME</td>
                                     <td style={{width: '40px', color: '#54B2E9'}}>:</td>
                                     <td style={{textAlign: 'left', color: '#54B2E9'}}>{location.state.time}<span> PM</span></td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <Link to={{pathname:`/`}}>              
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '20px'}} variant="contained">BACK</button>
+                        </Link>
                     </div>
+
+                    
                 </div>
             </div>
            

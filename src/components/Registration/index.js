@@ -272,11 +272,11 @@ const Registration = () =>{
                     </div>
 
 
-                    <div style={{display: 'flex', width: '100%', flexDirection: 'row',gap:"20px"}}>                    
+                    <div style={{display: 'flex', width: '100%', flexDirection: 'row'}}>                    
                         <Link to={{pathname:`/Date/${location.state.date}`}}>              
                             <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
                         </Link>
-                        <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
+                        <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                     </div>
                 </div>
                 

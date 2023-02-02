@@ -29,8 +29,8 @@ const TimeSlot = () => {
                     document.getElementById(`areaone${time}`).disabled = true;
                     document.getElementById(`areaone${time}`).style.display = "none";
                 }
-                document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} kites available`
-                document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} slots available`
+                document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
+                document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} SLOTS AVAILABLE`
     
             })
     
@@ -55,8 +55,8 @@ const TimeSlot = () => {
                     document.getElementById(`areatwo${time}`).style.display = "none";
                 }
     
-                document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} kites available`
-                document.getElementById(`areatwo${time}s`).innerHTML = `${doc2.data().slots} slots available`
+                document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
+                document.getElementById(`areatwo${time}s`).innerHTML = `${doc2.data().slots} SLOTS AVAILABLE`
             })
     
     
@@ -398,8 +398,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone4:30" onClick={() => {Handleclick("areaone4:30")}} value="4:30 PM - 5:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 4:30 PM
-                                <p id="areaone4:30k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areaone4:30s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areaone4:30k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areaone4:30s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -409,8 +409,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone5:30" onClick={() => {Handleclick("areaone5:30")}} value="5:30 PM - 6:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 5:30 PM
-                                <p id="areaone5:30k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areaone5:30s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areaone5:30k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areaone5:30s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -419,8 +419,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone6:30" onClick={() => {Handleclick("areaone6:30")}} value="6:30 PM - 7:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 6:30 PM
-                                <p id="areaone6:30k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areaone6:30s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areaone6:30k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areaone6:30s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -432,8 +432,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone7:30" onClick={() => {Handleclick("areaone7:30")}} value="7:30 PM - 8:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 7:30 PM
-                                <p id="areaone7:30k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areaone7:30s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areaone7:30k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areaone7:30s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -442,8 +442,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone8:30" onClick={() => {Handleclick("areaone8:30")}} value="8:30 PM - 9:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 8:30 PM 
-                                <p id="areaone8:30k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areaone8:30s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areaone8:30k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areaone8:30s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -460,8 +460,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo5" onClick={() => {Handleclick("areatwo5")}} value="5 PM - 6 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 5:00 PM
-                                <p id="areatwo5k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areatwo5s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areatwo5k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areatwo5s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -470,8 +470,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo6" onClick={() => {Handleclick("areatwo6")}} value="6 PM - 7 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 6:00 PM
-                                <p id="areatwo6k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areatwo6s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areatwo6k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areatwo6s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -480,8 +480,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo7" onClick={() => {Handleclick("areatwo7")}} value="7 PM - 8 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 7:00 PM
-                                <p id="areatwo7k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areatwo7s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areatwo7k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areatwo7s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -494,8 +494,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo8" onClick={() => {Handleclick("areatwo8")}} value="8 PM - 9 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 8:00 PM
-                                <p id="areatwo8k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areatwo8s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areatwo8k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areatwo8s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -504,8 +504,8 @@ const TimeSlot = () => {
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo9" onClick={() => {Handleclick("areatwo9")}} value="9 PM - 10 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 9:00 PM
-                                <p id="areatwo9k" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x kites available</em></p>
-                                <p id="areatwo9s" style={{color: 'grey', fontSize: '13px'}}><em style={{color: 'grey', }}>x slots available</em></p>
+                                <p id="areatwo9k" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x kites available</em></p>
+                                <p id="areatwo9s" style={{color: 'grey', fontSize: '10px'}}><em style={{color: 'grey', }}>x slots available</em></p>
                             </button>
                         </div>
                     </div>
@@ -514,10 +514,10 @@ const TimeSlot = () => {
 
                 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', gap:"20px", marginTop: '20px'}}>      
                         <Link to={{pathname:'/choosedate'}}>              
-                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
                         </Link>
                                     
-                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>Submit</button>
+                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                 </div>
 
  

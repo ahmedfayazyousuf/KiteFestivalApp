@@ -194,38 +194,38 @@ const Registration = () =>{
                         <h1 style={{fontSize:'20px', color: '#54B2E9'}}>BOOKING FOR: 9 FEB - 4.30 PM, 2023</h1>
                     </div>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                        <label style={{color:"#54B2E9", fontWeight:"400"}}>Name</label>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%', marginTop: '20px'}}>
+                        <label style={{color:"#54B2E9", fontWeight:"400"}}>NAME</label>
                         <input  type="text" id="Name" style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }}/> 
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                        <label style={{color:"#54B2E9", fontWeight:"400"}}>Email</label>
+                        <label style={{color:"#54B2E9", fontWeight:"400"}}>EMAIL</label>
                         <input type="email" id='email' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }} />
                     </div>
 
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                            <label style={{color:"#54B2E9", fontWeight:"400"}}>Mobile (+971 xx xxx xxxx)</label>
+                            <label style={{color:"#54B2E9", fontWeight:"400"}}>MOBILE (+971 xx xxx xxxx)</label>
                             <input type="number" id='no' style={{background:"transparent",border:"0", borderBottom:"1px solid #54B2E9", marginBottom:'15px', width:"100%", height:'27px', color:"#54B2E9" }} />
                         </div>
                     </div>
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column', marginBottom: '30px'}}>
-                        <label style={{color:"#54B2E9", fontWeight:"400"}}>Kite Assigned</label>
-                        <div style={{display:"flex",flexDirection:"row", gap: '70px'}}>  
+                        <label style={{color:"#54B2E9", fontWeight:"400"}}>KITE ASSIGNED</label>
+                        <div style={{display:"flex",flexDirection:"row"}}>  
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
-                            <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginRight: '10px',accentColor: "#029CFC",background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
+                            <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginLeft:'80px', marginRight: '10px',background:"black"}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
                         </div>
                     </div>
 
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row',gap:"20px"}}>                    
                         <Link to={{pathname:`/Date/${location.state.date}`}}>              
-                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
                         </Link>
-                        <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>Submit</button>
+                        <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                     </div>
                 </div>
                 

@@ -29,7 +29,7 @@ const Success = () => {
                 <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
                     <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500'}}>BOOKING DETAILS</h1>
 
-                    <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '400px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '400px'}}>
 
                         <table>
                             <tbody>
@@ -57,7 +57,7 @@ const Success = () => {
                         </table>
 
                         <Link to={{pathname:`/`}}>              
-                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '20px'}} variant="contained">BACK</button>
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '40px'}} variant="contained">RETURN</button>
                         </Link>
                     </div>
 

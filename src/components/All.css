@@ -11,10 +11,21 @@ body, html{
     overflow: hidden;
     height: 100vh;
 }
-*{
+/* *{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+} */
+
+
+@font-face{
+    font-family: myFont;
+    src:url(kin.otf);
 }
+h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th{
+    font-family: myFont;
+}
+
+
 /* html{
     overflow-y: scroll;
 } */

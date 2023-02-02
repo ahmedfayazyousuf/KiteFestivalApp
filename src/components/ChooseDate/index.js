@@ -84,36 +84,36 @@ const ChooseDate = () => {
     
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', padding: '0', margin: '0'}}>
                     <div id='9feb' className="content content-1" onClick={()=>{dateClick("9feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>9 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>9 - FEB</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='10feb' className="content content-1" onClick={()=>{dateClick("10feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>10 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>10 - FEB</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='11feb' className="content content-1" onClick={()=>{dateClick("11feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>11 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>11 - FEB</p>
                     </div>
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                     <div id='12feb' className="content content-1" onClick={()=>{dateClick("12feb")}} style={{padding: '0', margin: '10px'}}>
-                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>12 - Feb</p>
+                        <p style={{paddingTop: '30px', paddingBottom: '30px'}}>12 - FEB</p>
                     </div>
                 </div>
                 
             </div>
 
 
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center',gap:"20px", alignItems: 'center', marginTop:'3vh'}} >
+            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop:'3vh'}} >
                 <Link to={{pathname:"/"}}>              
-                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">Back</button>
+                            <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
                 </Link>
-                <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick= {() => Handleclick()}>Next</button> 
+                <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', marginLeft:'20px', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick= {() => Handleclick()}>NEXT</button> 
             </div>
 
               

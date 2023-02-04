@@ -11,6 +11,8 @@ const AdminLogin = () =>{
 
     const [times, setTimes] = useState('')
 
+    const [area, setArea] = useState('')
+
     function timefilter(){
         var body = document.getElementById("tbody").childNodes
 
@@ -19,7 +21,7 @@ const AdminLogin = () =>{
             body[i].style.display = "none"; // depending on what you're doing
         }
 
-        if(date === ''){
+        if(date === '' && area === ''){
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
@@ -28,10 +30,28 @@ const AdminLogin = () =>{
             }
             setTimes(timeSelected)
         }
-        else{
+        else if(date === ''){
+            var time = document.getElementById("time")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected + " " + area); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+            setTimes(timeSelected)
+        }
+        else if(area === ''){
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(date +" "+ timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+            setTimes(timeSelected)
+        }
+        else{
+            var time = document.getElementById("time")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(date +" "+ timeSelected + " " + area); //divsToHide is an array
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
             }
@@ -51,7 +71,7 @@ const AdminLogin = () =>{
             body[i].style.display = "none"; // depending on what you're doing
         }
 
-        if(times === ''){
+        if(times === '' && area === ''){
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
@@ -61,15 +81,88 @@ const AdminLogin = () =>{
     
             setDate(timeSelected)
         }
-        else{
+        else if(times === ''){
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
-            var divsToHide = document.getElementsByClassName(timeSelected+ " " + times); //divsToHide is an array
+            var divsToHide = document.getElementsByClassName(timeSelected+ " " + area); //divsToHide is an array
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
             }
     
             setDate(timeSelected)
+        }
+        else if(area === ''){
+            var time = document.getElementById("date")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected+ " " + times ); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setDate(timeSelected)
+        }
+        else{
+            var time = document.getElementById("date")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected+ " " + times + " " + area); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setDate(timeSelected)
+        }
+
+
+    }
+
+    function areafilter(){
+        var body = document.getElementById("tbody").childNodes
+
+        for(var i = 0; i < body.length; i++){
+
+            body[i].style.display = "none"; // depending on what you're doing
+        }
+
+        if(times === '' && date === ''){
+            var time = document.getElementById("area")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setArea(timeSelected)
+        }
+
+        else if(times === ''){
+            var time = document.getElementById("area")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(date+ " " + timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setArea(timeSelected)
+        }
+        else if (date === ''){
+            var time = document.getElementById("area")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(times + " " + timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setArea(timeSelected)
+        }
+        else{
+            var time = document.getElementById("area")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(date+ " " + times + " " + timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setArea(timeSelected)
         }
 
 
@@ -164,7 +257,7 @@ const AdminLogin = () =>{
 
                 
 
-                <select name="time" id="time" type="text" required onClick={()=>{locationfilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                <select name="time" id="area" type="text" required onClick={()=>{areafilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">LOCATION</option>
                     <option value="areaone">ACTIVITY AREA 1</option>
                     <option value="areatwo">ACTIVITY AREA 2</option>
@@ -190,7 +283,7 @@ const AdminLogin = () =>{
                     </thead>
                     <tbody id='tbody'>
                     {allDocs.map((doc) => (
-                            <tr key={doc.id } className= {doc.Date+ " " + doc.Time} style={{textAlign: 'center'}} >
+                            <tr key={doc.id } className= {doc.Date+ " " + doc.Time + " " + doc.Area} style={{textAlign: 'center'}} >
 
                                 <td>{doc.Name}</td>
                                 <td>{doc.Number}</td>   

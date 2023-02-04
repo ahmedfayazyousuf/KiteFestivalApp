@@ -7,6 +7,10 @@ import { useEffect, useState } from 'react';
 const AdminLogin = () =>{
     const [allDocs, setAllDocs] = useState([]);
 
+    const [date, setDate] = useState('')
+
+    const [times, setTimes] = useState('')
+
     function timefilter(){
         var body = document.getElementById("tbody").childNodes
 
@@ -15,12 +19,28 @@ const AdminLogin = () =>{
             body[i].style.display = "none"; // depending on what you're doing
         }
 
-        var time = document.getElementById("time")
-        var timeSelected = time.options[time.selectedIndex].value;
-        var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
-        for(var i = 0; i < divsToHide.length; i++){
-            divsToHide[i].style.display = "table-row"; // depending on what you're doing
+        if(date === ''){
+            var time = document.getElementById("time")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+            setTimes(timeSelected)
         }
+        else{
+            var time = document.getElementById("time")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(date +" "+ timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+            setTimes(timeSelected)
+        }
+
+        
+
+
     }
 
     function datefilter(){
@@ -31,12 +51,28 @@ const AdminLogin = () =>{
             body[i].style.display = "none"; // depending on what you're doing
         }
 
-        var time = document.getElementById("date")
-        var timeSelected = time.options[time.selectedIndex].value;
-        var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
-        for(var i = 0; i < divsToHide.length; i++){
-            divsToHide[i].style.display = "table-row"; // depending on what you're doing
+        if(times === ''){
+            var time = document.getElementById("date")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setDate(timeSelected)
         }
+        else{
+            var time = document.getElementById("date")
+            var timeSelected = time.options[time.selectedIndex].value;
+            var divsToHide = document.getElementsByClassName(timeSelected+ " " + times); //divsToHide is an array
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.display = "table-row"; // depending on what you're doing
+            }
+    
+            setDate(timeSelected)
+        }
+
+
     }
 
     useEffect(() => {
@@ -145,6 +181,7 @@ const AdminLogin = () =>{
                         <tr style ={{border: '1px solid black'}}>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NAME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NUMBER</th>
+                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>TIME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
@@ -156,7 +193,8 @@ const AdminLogin = () =>{
                             <tr key={doc.id } className= {doc.Date+ " " + doc.Time} style={{textAlign: 'center'}} >
 
                                 <td>{doc.Name}</td>
-                                <td>{doc.Number}</td>                   
+                                <td>{doc.Number}</td>   
+                                <td>{doc.Time}</td>                   
                                 
                                 <td id = {"S"+ doc.id} >{doc.Status}</td>
                                 
@@ -182,3 +220,13 @@ const AdminLogin = () =>{
 }
 
 export default AdminLogin;
+
+
+
+{/* <div class="download-wrapper" onClick="download()">
+  <p><i class="material-icons">file_download</i></p>
+  <p>Download Demo CSV File</p>
+</div> */}
+
+
+

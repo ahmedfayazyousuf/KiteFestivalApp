@@ -1,3 +1,4 @@
+import Logo from './booking.png';
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import '../All.css'; 
@@ -40,10 +41,13 @@ const Success = () => {
             
             <div style={{display: 'flex', flexDirection: 'column', height: '100%', width: '100%'}}>
                 
-                <div style={{display: 'flex', flexDirection: 'column', height: '67%', width: '100%'}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '50%', width: '100%'}}>
+                    <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'   }}>
+                        <img src= {Logo} alt="Logo" style={{width: '350px', marginTop: '20px', marginRight: '20px'}}/>
+                    </div>
                 </div>
 
-                <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '33%', width: '100%'}}>
+                <div style={{display: 'flex', alignItems: 'center', textAlign: 'center', flexDirection: 'column', height: '50%', width: '100%', marginTop: '50px'}}>
                     <h1 style={{fontSize: '20px', color: '#54B2E9', fontWeight: '500', marginBottom: '20px'}}>BOOKING DETAILS</h1>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '250px'}}>

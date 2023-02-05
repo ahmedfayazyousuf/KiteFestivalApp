@@ -3,6 +3,7 @@ import Logo from './download.png'
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import { useEffect, useState } from 'react';
+import csvDownload from 'json-to-csv-export'
 
 const AdminLogin = () =>{
     const [allDocs, setAllDocs] = useState([]);
@@ -12,6 +13,10 @@ const AdminLogin = () =>{
     const [times, setTimes] = useState('')
 
     const [area, setArea] = useState('')
+
+    const [at, setAt] = useState(0)
+
+    const [rt, setRt] = useState(0)
 
     function timefilter(){
         var body = document.getElementById("tbody").childNodes
@@ -173,6 +178,14 @@ const AdminLogin = () =>{
             if(snapshot.docs.length>0){
                 snapshot.docs.forEach((doc)=>{
                     var data = doc.data()
+
+                    if(data.Status === 'Attended'){
+                        setAt(prev => prev+1)
+                    }
+
+                    if(data.KiteStatus === 'Returned'){
+                        setRt(prev => prev+1)
+                    }
                     data.id = doc.id
                     setAllDocs((prev)=>{
                         return[...prev,data];
@@ -213,6 +226,54 @@ const AdminLogin = () =>{
     function locationfilter() {
 
     }
+
+// Quick and simple export target #table_id into a csv
+function download(table_id, separator = ',') {
+    // Select rows from table_id
+    var rows = document.querySelectorAll('table#' + table_id + ' tr');
+
+    if (times === '' && date === ''  && area === ''){
+        rows = document.querySelectorAll('table#' + table_id + ' tr');
+    }
+    else{
+        rows = document.getElementsByClassName(date + " " + times + " " + area);
+    }
+    
+    // Construct csv
+    var csv = ['"NAME","NUMBER","ATTENDANCE","KITE STATUS"',];
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        if (cols[0].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ').replace(/"/g, '""') === 'NAME' ){
+            continue
+        }
+        for (var j = 0; j < cols.length-2; j++) {
+            // Clean innertext to remove multiple spaces and jumpline (break csv)
+            var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ')
+
+            // Escape double-quote with double-double-quote (see https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv)
+            data = data.replace(/"/g, '""');
+            // Push escaped string
+            row.push('"' + data + '"');
+        }
+        csv.push(row.join(separator));
+    }
+    console.log(csv)
+    var csv_string = csv.join('\n');
+    // Download it
+    var filename = 'export_' + table_id + '_' + new Date().toLocaleDateString() + '.csv';
+    var link = document.createElement('a');
+    // link.style.display = 'none';
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv_string));
+    link.setAttribute('download', filename);
+
+    document.body.appendChild(link);
+
+    link.click();
+    document.body.removeChild(link);
+}
+
+
 
 
 
@@ -263,19 +324,22 @@ const AdminLogin = () =>{
                     <option value="areatwo">ACTIVITY AREA 2</option>
                 </select>
 
-                <Link to={{pathname:"/adminlogin"}}>
-                    <img src= {Logo} alt="Logo" style={{width: '4vh', marginLeft: '20px'}}/>
-                </Link>
+                   {/* <div onSubmit={download_table_as_csv("tableid")}> <img src= {Logo} alt="Logo" style={{width: '4vh', marginLeft: '20px'}} /> </div> */}
+
+                   <button onClick={()=> download("tableid")}>
+                        Download Data
+                    </button>
+
             </div>
             
             <div style={{display:"flex", flexDirection:"column", height:'100%', width:"100%", justifyContent:"center", alignItems:"center"}}>
-                <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%', height: "100%", backgroundColor: 'rgba(150, 216, 255, 0.5)', borderCollapse: 'collapse', textAlign:"center", border: '2px solid #54B2E9'}}>
+                <table id='tableid' style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%', height: "100%", backgroundColor: 'rgba(150, 216, 255, 0.5)', borderCollapse: 'collapse', textAlign:"center", border: '2px solid #54B2E9'}}>
                     <thead>
                         <tr style ={{border: '1px solid black'}}>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NAME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NUMBER</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS</th>
+                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE (count = {at})</th>
+                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS (count = {rt})</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
                         </tr>

@@ -204,13 +204,16 @@ const AdminLogin = () =>{
             Status:"Attended"
         })
 
+        var value = document.getElementById(`S${id}`).innerHTML
+        if( value !== "Attended"){
+            setAt(at+1)
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${at+1})`
+        }
+
         document.getElementById(`S${id}`).innerHTML = "Attended"
         console.log(`S${id}`)
 
-        setAt(at+1)
-        document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${at+1})`
-
-
+ 
 
     }
 
@@ -220,13 +223,18 @@ const AdminLogin = () =>{
         await firebase.firestore().collection("Users").doc(id).update({
             KiteStatus:"Returned"
         })
+        var value = document.getElementById(`K${id}`).innerHTML
+        console.log(value)
+        if( value !== "Returned"){
+            setRt(rt+1)
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${rt+1})`
+        }
 
         console.log(`K${id}`)
 
         document.getElementById(`K${id}`).innerHTML = "Returned"
 
-        setRt(rt+1)
-        document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${rt+1})`
+
     }
 
     function locationfilter() {

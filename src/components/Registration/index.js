@@ -53,24 +53,7 @@ const Registration = () =>{
        
         console.log(Email)
 
-        var validRegex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-        if (Email === "" || !Email.match(validRegex))
-        {
-            if(emailB === false){
-                const el = document.createElement("p");
-                const name = document.getElementById('parent')
-                el.id = "emailerr"
-                el.style.color = "red";
-                el.style.marginLeft = "1100px";
-                el.style.fontSize = "10px";
-                el.innerHTML = "Invalid Email"
-                name.appendChild(el);
-                setEmailB(true)
-            }
-            console.log("lessgoooooo")
-            return;
-        }
 
         var area = location.state.time.slice(0,7)
         var time = location.state.time.slice(7)

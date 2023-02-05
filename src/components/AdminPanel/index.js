@@ -207,8 +207,8 @@ const AdminLogin = () =>{
         document.getElementById(`S${id}`).innerHTML = "Attended"
         console.log(`S${id}`)
 
-        setAt(prev => prev+1)
-        document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${at})`
+        setAt(at+1)
+        document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${at+1})`
 
 
 
@@ -225,8 +225,8 @@ const AdminLogin = () =>{
 
         document.getElementById(`K${id}`).innerHTML = "Returned"
 
-        setRt(prev => prev+1)
-        document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${rt})`
+        setRt(rt+1)
+        document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${rt+1})`
     }
 
     function locationfilter() {

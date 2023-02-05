@@ -207,6 +207,9 @@ const AdminLogin = () =>{
         document.getElementById(`S${id}`).innerHTML = "Attended"
         console.log(`S${id}`)
 
+        setAt(prev => prev+1)
+        document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${at})`
+
 
 
     }
@@ -221,6 +224,9 @@ const AdminLogin = () =>{
         console.log(`K${id}`)
 
         document.getElementById(`K${id}`).innerHTML = "Returned"
+
+        setRt(prev => prev+1)
+        document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${rt})`
     }
 
     function locationfilter() {
@@ -338,8 +344,8 @@ function download(table_id, separator = ',') {
                         <tr style ={{border: '1px solid black'}}>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NAME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NUMBER</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE (count = {at})</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS (count = {rt})</th>
+                            <th id='at' style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE (count = {at})</th>
+                            <th id='rt' style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS (count = {rt})</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
                         </tr>

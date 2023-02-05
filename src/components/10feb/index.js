@@ -1,7 +1,6 @@
 import './User.css';
 import firebase from '../../firebase'
 import { useState } from "react"
-import GetReady from '../getready.png';
 import { useParams } from "react-router-dom";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -14,6 +13,8 @@ const TimeSlot = () => {
     const [user, setUser] = useState([]);
 
     const { id } = useParams();
+    const idd = id.slice(0,2);
+    const idd2 = id.slice(2,5);
     const navigate = useNavigate();
 
     const getKites = async () =>{
@@ -34,15 +35,8 @@ const TimeSlot = () => {
             document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} SLOTS AVAILABLE`
 
         })
-
-
-
-        
-
         setUser(current => [...current, doc.data()]);
     });
-
-
     })
 
     kites.collection("Areas").doc("Area2").collection('timeslots').get().then((querySnapshot) => {
@@ -59,31 +53,9 @@ const TimeSlot = () => {
             document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
             document.getElementById(`areatwo${time}s`).innerHTML = `${doc2.data().slots} SLOTS AVAILABLE`
         })
-
-
-        
-
         setUser(current => [...current, doc.data()]);
     });
-
-
     })
-    // eslint-disable-next-line
-  
-
-//     const Cars2 = Location.collection('models').doc(`${id}`).collection('timeslot').where("available", "==", 0).get().then((doc)=>{
-//         console.log(doc.size)
-//         if(doc.size === 8){
-//                     const node = document.createElement("p");
-//         node.style.color = "red";
-//         node.style.fontSize = "10px";
-//         node.style.marginRight = "10px";
-//         node.innerHTML = "No Timeslots Available";
-// document.getElementById(`slotparent`).appendChild(node);
-//         }
-//     })
-
-    // console.log(Cars)
     }
 
     function HandleSubmit(){
@@ -101,9 +73,7 @@ const TimeSlot = () => {
 
     function Handleclick(e){
         console.log(user)
-
         console.log()
-
         if(e === 'areaone12:30'){
             document.getElementById(e).style.background = "#54B2E9"; 
             document.getElementById(e).style.color = "white";
@@ -139,7 +109,6 @@ const TimeSlot = () => {
 
             setTime('areaone12:30');
         }
-        
         if(e === 'areaone1:30'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -175,7 +144,6 @@ const TimeSlot = () => {
 
             setTime('areaone1:30');
         }
-        
         if(e === 'areaone2:30'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -211,7 +179,6 @@ const TimeSlot = () => {
 
             setTime('areaone2:30');
         }
-        
         if(e === 'areaone3:30'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -247,7 +214,6 @@ const TimeSlot = () => {
 
             setTime('areaone3:30');
         }
-        
         if(e === 'areaone4:30'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -283,7 +249,6 @@ const TimeSlot = () => {
 
             setTime('areaone4:30');
         }
-
         if(e === 'areaone5:30'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -319,13 +284,6 @@ const TimeSlot = () => {
 
             setTime('areaone5:30');
         }
-        
-
-
-
-
-
-
         if(e === 'areatwo1'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -361,7 +319,6 @@ const TimeSlot = () => {
 
             setTime('areatwo1');
         }
-        
         if(e === 'areatwo3'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -467,7 +424,6 @@ const TimeSlot = () => {
 
             setTime('areatwo5');
         }
-
         if(e === 'areatwo6'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -503,7 +459,6 @@ const TimeSlot = () => {
 
             setTime('areatwo6');
         }
-
         if(e === 'areatwo7'){
             document.getElementById(e).style.background = "#54B2E9";
             document.getElementById(e).style.color = "white";
@@ -539,11 +494,15 @@ const TimeSlot = () => {
 
             setTime('areatwo7');
         }
-        
     }
     
     return(
-        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper2.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}} >
+        <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', margin: '0', padding: '0'}} >
+
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '5px'}} >
+                    <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - {idd} {idd2}</p>
+                </div>
+
 
                 <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', marginBottom: '20px'}} >
                     <p style={{fontSize: '25px', color: 'white', padding: '5px'}} >ACTIVITY AREA 1</p>

@@ -1,7 +1,7 @@
+import './admin.css';
 import Logo from './download.png'
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';
-import '../All.css'; 
 import { useEffect, useState } from 'react';
 
 const AdminLogin = () =>{
@@ -267,14 +267,13 @@ const AdminLogin = () =>{
                     <img src= {Logo} alt="Logo" style={{width: '4vh', marginLeft: '20px'}}/>
                 </Link>
             </div>
-
+            
             <div style={{display:"flex", flexDirection:"column", height:'100%', width:"100%", justifyContent:"center", alignItems:"center"}}>
-                <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%', height: "100%", backgroundColor: 'rgba(150, 216, 255, 0.5)', borderCollapse: 'collapse', textAlign:"center", overflowY: 'scroll', border: '2px solid #54B2E9'}}>
+                <table style={{backgroundColor: '#fff', borderRadius: '5px', width: '90%', height: "100%", backgroundColor: 'rgba(150, 216, 255, 0.5)', borderCollapse: 'collapse', textAlign:"center", border: '2px solid #54B2E9'}}>
                     <thead>
                         <tr style ={{border: '1px solid black'}}>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NAME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>NUMBER</th>
-                            <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>TIME</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>ATTENDANCE</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}>KITE STATUS</th>
                             <th style={{backgroundColor: 'black', color: 'white', padding: '5px', border: '1px solid white'}}></th>
@@ -286,8 +285,7 @@ const AdminLogin = () =>{
                             <tr key={doc.id } className= {doc.Date+ " " + doc.Time + " " + doc.Area} style={{textAlign: 'center'}} >
 
                                 <td>{doc.Name}</td>
-                                <td>{doc.Number}</td>   
-                                <td>{doc.Time}</td>                   
+                                <td>{doc.Number}</td>                  
                                 
                                 <td id = {"S"+ doc.id} >{doc.Status}</td>
                                 
@@ -306,7 +304,7 @@ const AdminLogin = () =>{
                 </table>
             </div>
             <Link to={{pathname:`/`}}>              
-                    <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '40px'}} variant="contained">RETURN</button>
+                    <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px', marginTop: '20px', marginBottom: '100px'}} variant="contained">RETURN</button>
                 </Link>
         </div>
     )

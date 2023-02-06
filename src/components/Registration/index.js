@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import {useLocation} from 'react-router-dom';
 
 const Registration = () =>{
+    const [numberr, setNumberr] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     const buttonRef = useRef(null);
@@ -43,6 +44,16 @@ const Registration = () =>{
             // setUser({...user, [firstname]:value})
         }
     }
+    function HandleMap() {
+        if(location.state.date === '9feb') {
+            navigate(`/${location.state.date}`)
+        }
+
+        else{
+            navigate(`/Date/${location.state.date}`)
+        }
+    }
+
     function HandleSubmit(){
         console.log('2');
 
@@ -55,12 +66,21 @@ const Registration = () =>{
        
         console.log(Email)
 
+        if(Name === ''){
+            buttonRef.current.disabled = false;
+            document.getElementById('error').innerHTML = "Please Enter Your Name"
+            return;
+        }
+
         if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
             console.log('Hello')
             buttonRef.current.disabled = false;
+            document.getElementById('error').innerHTML = "Please Enter a Valid Phone Number"
             return;
             
         }
+
+
 
 
         var area = location.state.time.slice(0,7)
@@ -257,19 +277,23 @@ const Registration = () =>{
                         </div>
                     </div>
 
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', marginBottom: '30px'}}>
+                    <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <label style={{color:"#54B2E9", fontWeight:"400", marginBottom: '10px'}}>KITE ASSIGNED</label>
-                        <div style={{display:"flex",flexDirection:"row"}}>  
+                        <div style={{display:"flex",flexDirection:"row"}}>
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkmd' style={{marginRight: '10px'}} value="m" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>Yes</label>
                             <label style={{color:"#54B2E9", fontWeight:"400"}}><input id='checkfd' style={{marginLeft:'80px', marginRight: '10px'}} value="f" onClick={(e)=>{onlyOnetwo(e.target.value)}} type="checkbox"/>No</label>
                         </div>
                     </div>
 
+                    <div>
+                        <p id='error' style={{color:"red", marginBottom: '30px'}}>  </p>
+                    </div>
+
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row'}}>                    
-                        <Link to={{pathname:`/Date/${location.state.date}`}}>              
-                            <button className="grab"  style={{cursor: 'grab', width: '200px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
-                        </Link>
+                        {/* <Link to={{pathname:`/Date/${location.state.date}`}}>               */}
+                            <button onClick={HandleMap} className="grab"  style={{cursor: 'grab', width: '200px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
+                        {/* </Link> */}
                         <button ref={buttonRef} className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                     </div>
                 </div>

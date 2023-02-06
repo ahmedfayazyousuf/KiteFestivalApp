@@ -292,7 +292,7 @@ const TimeSlot = () => {
             document.getElementById('areaone7:30').style.color = "black";
             document.getElementById('areaone8:30').style.color = "black";
 
-            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
             
             document.getElementById('areatwo8').style.color = "black";
             document.getElementById('areatwo9').style.color = "black";

@@ -363,8 +363,8 @@ const TimeSlot = () => {
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', backgroundImage: `url("wallpaper2.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover', margin: '0', padding: '0'}} >
 
             <div className="slotparent"  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center', width: '100%'}}>
-                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '5px'}} >
-                    <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - 9 FEBRUARY</p>
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '20px'}} >
+                    <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - 9 february</p>
                 </div>
                 
                 <div  style={{display:'flex', width: '80%', justifyContent: 'center', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', marginBottom: '20px'}} >

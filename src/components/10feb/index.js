@@ -499,8 +499,8 @@ const TimeSlot = () => {
     return(
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', margin: '0', padding: '0'}} >
 
-                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '5px'}} >
-                    <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - {idd} {idd2}</p>
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '20px'}} >
+                    <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - {idd} {idd2}ruary</p>
                 </div>
 
 
@@ -527,8 +527,8 @@ const TimeSlot = () => {
                                 <p id="areaone1:30k" style={{color: '#BAB4B4', fontSize: '10px'}}><em >x kites available</em></p>
                                 <p id="areaone1:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
                             </button>
-                        </div> 
-                    </div>                  
+                        </div>
+                    </div>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>

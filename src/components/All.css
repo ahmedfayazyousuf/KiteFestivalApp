@@ -5,6 +5,7 @@ body, html{
     font-weight: 400;
     background-color: white;
     height: 100vh;
+    -webkit-overflow-scrolling: touch;
 }
 
 @font-face{

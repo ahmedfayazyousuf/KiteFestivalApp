@@ -480,7 +480,7 @@ function download(table_id, separator = ',') {
 
             <div style={{display: 'flex', width: '90%', marginBottom: '12px', marginTop: '20px'}}>
 
-                <select name="time" id="date" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                <select name="time" id="date" type="text" required onChange={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">DATE</option>
                     <option value="9feb">9 - FEB</option>
                     <option value="10feb">10 - FEB</option>
@@ -514,7 +514,7 @@ function download(table_id, separator = ',') {
 
                 
 
-                <select name="time" id="area" type="text" required onClick={()=>{areafilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                <select name="time" id="area" type="text" required onChange={()=>{areafilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">LOCATION</option>
                     <option value="areaone">ACTIVITY AREA 1</option>
                     <option value="areatwo">ACTIVITY AREA 2</option>

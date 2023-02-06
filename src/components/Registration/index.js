@@ -68,14 +68,14 @@ const Registration = () =>{
 
         if(Name === ''){
             buttonRef.current.disabled = false;
-            document.getElementById('error').innerHTML = "Please Enter Your Name"
+            document.getElementById('error').innerHTML = "PLEASE ENTER YOUR NAME"
             return;
         }
 
         if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
             console.log('Hello')
             buttonRef.current.disabled = false;
-            document.getElementById('error').innerHTML = "Please Enter a Valid Phone Number"
+            document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
             return;
             
         }

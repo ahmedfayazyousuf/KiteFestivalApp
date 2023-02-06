@@ -87,6 +87,7 @@ const TimeSlot = () => {
     
         function HandleSubmit(){
             console.log('hello')
+            
             if(time === ''){
                 return;
             }

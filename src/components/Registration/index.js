@@ -44,15 +44,23 @@ const Registration = () =>{
         }
     }
     function HandleSubmit(){
+        console.log('2');
 
         buttonRef.current.disabled = true;
         const Users = firebase.firestore().collection("Users");
         const Email = document.getElementById("email").value;
         const Number = document.getElementById("no").value;
         const Name = document.getElementById("Name").value;
+
        
         console.log(Email)
 
+        if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
+            console.log('Hello')
+            buttonRef.current.disabled = false;
+            return;
+            
+        }
 
 
         var area = location.state.time.slice(0,7)
@@ -172,6 +180,9 @@ const Registration = () =>{
                         
                     })
                 }
+
+                
+
                 else{
                     var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
                 timeslot.get().then(async (doc)=>{

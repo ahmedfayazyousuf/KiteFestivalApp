@@ -1,5 +1,5 @@
 import Logo from './admin.png'
-import Logo2 from './logo.png'
+import Logo2 from './Logo.jpg'
 import { Link } from "react-router-dom";
 
 const HomePage = () => { 

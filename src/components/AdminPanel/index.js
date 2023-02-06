@@ -3,7 +3,6 @@ import Logo from './download.png'
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import { useEffect, useState } from 'react';
-import csvDownload from 'json-to-csv-export'
 
 const AdminLogin = () =>{
     const [allDocs, setAllDocs] = useState([]);
@@ -340,8 +339,8 @@ function download(table_id, separator = ',') {
 
                    {/* <div onSubmit={download_table_as_csv("tableid")}> <img src= {Logo} alt="Logo" style={{width: '4vh', marginLeft: '20px'}} /> </div> */}
 
-                   <button onClick={()=> download("tableid")}>
-                        Download Data
+                   <button onClick={()=> download("tableid")} style={{border: 'none'}}>
+                       <img src= {Logo} alt="Logo" style={{width: '4vh', marginLeft: '20px'}} />
                     </button>
 
             </div>

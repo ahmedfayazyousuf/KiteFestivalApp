@@ -27,9 +27,9 @@ const TimeSlot = () => {
         kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
             var time=doc.id.slice(0,-3)
             console.log(time)
-            if(doc2.data().available<=0){
-                document.getElementById(`areaone${time}`).disabled = true;
-                document.getElementById(`areaone${time}`).style.display = "none";
+            if(doc2.data().slots<=0){
+                document.getElementById(`areaone${time}`).setAttribute("disabled","disabled");
+                // document.getElementById(`areaone${time}`).style.display = "none";
             }
             document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
             document.getElementById(`areaone${time}s`).innerHTML = `${doc2.data().slots} SLOTS AVAILABLE`
@@ -46,8 +46,8 @@ const TimeSlot = () => {
             var time=doc.id.slice(0,-6)
             console.log(time)
             if(doc2.data().available<=0){
-                document.getElementById(`areatwo${time}`).disabled = true;
-                document.getElementById(`areatwo${time}`).style.display = "none";
+                document.getElementById(`areatwo${time}`).setAttribute("disabled","disabled");
+                // document.getElementById(`areatwo${time}`).style.display = "none";
             }
 
             document.getElementById(`areatwo${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
@@ -63,6 +63,14 @@ const TimeSlot = () => {
         if(time === ''){
             return;
         }
+
+        var value = document.getElementById(`${time}s`).innerHTML
+
+        if(value === '0 SLOTS AVAILABLE'){
+            document.getElementById('error').innerHTML = "NO SLOTS AVAILABLE"
+            return;
+        }
+
     navigate('/registration',{state:{time:time,date:id}});
     }
 
@@ -668,6 +676,12 @@ const TimeSlot = () => {
                             </button>
                         </div>
                     </div>
+
+                </div>
+
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', marginTop: '20px'}}>
+
+                    <p id='error' style={{color:"red"}}>  </p>
 
                 </div>
 

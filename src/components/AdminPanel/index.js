@@ -29,36 +29,96 @@ const AdminLogin = () =>{
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
             setTimes(timeSelected)
         }
         else if(date === ''){
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected + " " + area); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
             setTimes(timeSelected)
         }
         else if(area === ''){
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(date +" "+ timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
             setTimes(timeSelected)
         }
         else{
             var time = document.getElementById("time")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(date +" "+ timeSelected + " " + area); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
             setTimes(timeSelected)
         }
 
@@ -79,39 +139,102 @@ const AdminLogin = () =>{
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
+
             }
-    
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
+
+            console.log(divsToHide[1].childNodes[2].innerHTML,divsToHide[1].childNodes[3].innerHTML)
             setDate(timeSelected)
         }
         else if(times === ''){
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected+ " " + area); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
-    
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
+            console.log(divsToHide[1].childNodes[2].innerHTML,divsToHide[1].childNodes[3].innerHTML)
             setDate(timeSelected)
         }
         else if(area === ''){
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected+ " " + times ); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
-    
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
+            console.log(divsToHide[1].childNodes[2].innerHTML,divsToHide[1].childNodes[3].innerHTML)
             setDate(timeSelected)
         }
         else{
             var time = document.getElementById("date")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected+ " " + times + " " + area); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
+                
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
+            console.log(divsToHide[1].childNodes[2].innerHTML,divsToHide[1].childNodes[3].innerHTML)
     
             setDate(timeSelected)
         }
@@ -131,9 +254,24 @@ const AdminLogin = () =>{
             var time = document.getElementById("area")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
     
             setArea(timeSelected)
         }
@@ -142,9 +280,24 @@ const AdminLogin = () =>{
             var time = document.getElementById("area")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(date+ " " + timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
     
             setArea(timeSelected)
         }
@@ -152,9 +305,24 @@ const AdminLogin = () =>{
             var time = document.getElementById("area")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(times + " " + timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
     
             setArea(timeSelected)
         }
@@ -162,9 +330,24 @@ const AdminLogin = () =>{
             var time = document.getElementById("area")
             var timeSelected = time.options[time.selectedIndex].value;
             var divsToHide = document.getElementsByClassName(date+ " " + times + " " + timeSelected); //divsToHide is an array
+            var counta = 0
+            var countr = 0
             for(var i = 0; i < divsToHide.length; i++){
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
+                var attended = divsToHide[i].childNodes[2].innerHTML
+                var returned = divsToHide[i].childNodes[3].innerHTML
+
+                if(attended === 'Attended'){
+                    counta = counta +1
+                }
+
+                if(returned === 'Returned'){
+                    countr = countr + 1
+                }
             }
+
+            document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
+            document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
     
             setArea(timeSelected)
         }
@@ -297,7 +480,7 @@ function download(table_id, separator = ',') {
 
             <div style={{display: 'flex', width: '90%', marginBottom: '12px', marginTop: '20px'}}>
 
-                <select name="time" id="date" type="text" required onClick={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                <select name="time" id="date" type="text" required onChange={()=>{datefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">DATE</option>
                     <option value="9feb">9 - FEB</option>
                     <option value="10feb">10 - FEB</option>
@@ -331,7 +514,7 @@ function download(table_id, separator = ',') {
 
                 
 
-                <select name="time" id="area" type="text" required onClick={()=>{areafilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
+                <select name="time" id="area" type="text" required onChange={()=>{areafilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '20vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">LOCATION</option>
                     <option value="areaone">ACTIVITY AREA 1</option>
                     <option value="areatwo">ACTIVITY AREA 2</option>

@@ -448,7 +448,7 @@ const TimeSlot = () => {
             document.getElementById('areaone7:30k').style.color = "black";
             document.getElementById('areaone8:30k').style.color = "black";
 
-            document.getElementById('areatwo6k').style.color = "black";
+            document.getElementById('areatwo5k').style.color = "black";
             
             document.getElementById('areatwo8k').style.color = "black";
             document.getElementById('areatwo9k').style.color = "black";
@@ -459,7 +459,7 @@ const TimeSlot = () => {
             document.getElementById('areaone7:30s').style.color = "black";
             document.getElementById('areaone8:30s').style.color = "black";
 
-            document.getElementById('areatwo6s').style.color = "black";
+            document.getElementById('areatwo5s').style.color = "black";
             
             document.getElementById('areatwo8s').style.color = "black";
             document.getElementById('areatwo9s').style.color = "black";

@@ -1,4 +1,4 @@
-import Logo from './booking.png';
+import Logo from './booking.jpg';
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';
 import '../All.css'; 

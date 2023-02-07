@@ -87,9 +87,18 @@ const TimeSlot = () => {
     
         function HandleSubmit(){
             console.log('hello')
+            
             if(time === ''){
                 return;
             }
+
+            var value = document.getElementById(`${time}s`).innerHTML
+
+            if(value === '0 SLOTS AVAILABLE'){
+                document.getElementById('error').innerHTML = "NO SLOTS AVAILABLE"
+                return;
+            }
+
         navigate('/registration',{state:{time:time,date:"9feb"}});
         }
     
@@ -428,7 +437,7 @@ const TimeSlot = () => {
             document.getElementById('areaone7:30').style.color = "black";
             document.getElementById('areaone8:30').style.color = "black";
 
-            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
             
             document.getElementById('areatwo8').style.color = "black";
             document.getElementById('areatwo9').style.color = "black";
@@ -690,6 +699,12 @@ const TimeSlot = () => {
                             </button>
                         </div>
                     </div>
+
+                </div>
+
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', marginTop: '20px'}}>
+
+                    <p id='error' style={{color:"red"}}>  </p>
 
                 </div>
 

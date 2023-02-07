@@ -1,4 +1,3 @@
-import './admin.css';
 import Logo from './download.png'
 import { Link } from "react-router-dom";
 import firebase from '../../firebase';

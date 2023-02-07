@@ -28,7 +28,6 @@ const TimeSlot = () => {
             var time=doc.id.slice(0,-3)
             console.log(time)
             if(doc2.data().slots<=0){
-                document.getElementById(`areaone${time}`).setAttribute("disabled","disabled");
                 // document.getElementById(`areaone${time}`).style.display = "none";
             }
             document.getElementById(`areaone${time}k`).innerHTML = `${doc2.data().kites} KITES AVAILABLE`
@@ -46,7 +45,7 @@ const TimeSlot = () => {
             var time=doc.id.slice(0,-6)
             console.log(time)
             if(doc2.data().available<=0){
-                document.getElementById(`areatwo${time}`).setAttribute("disabled","disabled");
+                // document.getElementById(`areatwo${time}`).setAttribute("disabled","disabled");s
                 // document.getElementById(`areatwo${time}`).style.display = "none";
             }
 

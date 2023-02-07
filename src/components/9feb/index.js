@@ -91,6 +91,14 @@ const TimeSlot = () => {
             if(time === ''){
                 return;
             }
+
+            var value = document.getElementById(`${time}s`).innerHTML
+
+            if(value === '0 SLOTS AVAILABLE'){
+                document.getElementById('error').innerHTML = "NO SLOTS AVAILABLE"
+                return;
+            }
+
         navigate('/registration',{state:{time:time,date:"9feb"}});
         }
     
@@ -488,6 +496,12 @@ const TimeSlot = () => {
                             </button>
                         </div>
                     </div>
+
+                </div>
+
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', marginTop: '20px'}}>
+
+                    <p id='error' style={{color:"red"}}>  </p>
 
                 </div>
 

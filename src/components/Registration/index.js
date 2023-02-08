@@ -96,6 +96,7 @@ const Registration = () =>{
             Date:date,
             Status: "-",
             KiteStatus: "-",
+            Select:select,
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then( function(docRef) {

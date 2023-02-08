@@ -375,6 +375,8 @@ const AdminLogin = () =>{
             }   
         });
         console.log(allDocs);
+
+        // document.getElementsByClassName("Yes").style.display = "none";
     },[]);
 
 
@@ -555,7 +557,7 @@ function download(table_id, separator = ',') {
                                 </td>
 
                                 <td>
-                                    <button style={{backgroundColor: 'black', color: 'white', padding: '5px', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Returned(doc.id)}}>Returned</button>
+                                    <button  style={{backgroundColor: 'black', color: 'white', padding: '5px', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px',visibility: doc.Select === "Yes"? 'visible': 'hidden'}} onClick={() => {Returned(doc.id)}}>Returned</button>
                                 </td>
                             </tr>
                         ))}

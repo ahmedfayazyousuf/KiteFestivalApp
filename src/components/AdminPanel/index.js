@@ -550,7 +550,7 @@ function download(table_id, separator = ',') {
                                 
                                 <td id = {"S"+ doc.id} >{doc.Status}</td>
                                 
-                                <td id = {"K"+ doc.id}>{doc.KiteStatus}</td> 
+                                <td id = {"K"+ doc.id}>{doc.Select === "No"? 'KITE NOT ASSIGNED': doc.KiteStatus === "-"? 'KITE NOT RETURNED': doc.KiteStatus} </td> 
 
                                 <td>
                                     <button style={{backgroundColor: 'black', color: 'white', padding: '5px', margin: '4px', padding: '5px', borderRadius: '10px', marginRight: '5px'}} onClick={() => {Attended(doc.id)}}>Attended</button>

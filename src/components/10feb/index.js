@@ -1620,7 +1620,7 @@ const TimeSlot = () => {
     return(
         <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', height: '100vh', width: '100vw', margin: '0', padding: '0'}} >
 
-                <div  style={{display:'flex', width: '80%', justifyContent: 'center', marginBottom: '20px'}} >
+                <div  style={{display:'flex', width: '80%', justifyContent: 'center'}} >
                     <p style={{fontSize: '25px', color: '#54B2E9', padding: '5px'}} >SLOTS - {idd} {idd2}ruary</p>
                 </div>
 
@@ -1846,7 +1846,7 @@ const TimeSlot = () => {
                 </div>
 
 
-                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row', marginTop: '5px'}}>      
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexDirection: 'row'}}>      
                         <Link to={{pathname:'/choosedate'}}>              
                             <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', backgroundColor: '#54B2E9', color: 'white', fontSize: '25px'}} variant="contained">BACK</button>
                         </Link>

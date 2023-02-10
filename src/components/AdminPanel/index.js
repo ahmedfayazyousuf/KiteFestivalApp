@@ -356,6 +356,7 @@ const AdminLogin = () =>{
 
     useEffect(() => {
         firebase.firestore().collection("Users").get().then((snapshot) => {
+            console.log(snapshot.docs)
             if(snapshot.docs.length>0){
                 snapshot.docs.forEach((doc)=>{
                     var data = doc.data()
@@ -375,6 +376,38 @@ const AdminLogin = () =>{
             }   
         });
         console.log(allDocs);
+
+        firebase.firestore().collection("Users").onSnapshot(function(doc) {
+            // var cities = [];
+            // querySnapshot.forEach(function(doc) {
+            //     cities.push(doc.data().name);
+            // });
+
+            setAllDocs([])
+            setAt(0)
+            setRt(0)
+
+            doc.forEach((docs)=>{
+                var data = docs.data()
+
+                if(data.Status === 'Attended'){
+                    setAt(prev => prev+1)
+                }
+
+                if(data.KiteStatus === 'Returned'){
+                    setRt(prev => prev+1)
+                }
+                data.id = doc.id
+                setAllDocs((prev)=>{
+                    return[...prev,data];
+                });
+
+            })
+
+
+            console.log('new doc')
+            
+          });
 
         // setInterval(()=>{
         //     setAllDocs([])
@@ -451,6 +484,7 @@ const AdminLogin = () =>{
 
 // Quick and simple export target #table_id into a csv
 function download(table_id, separator = ',') {
+    console.log(allDocs)
     // Select rows from table_id
     var rows = document.querySelectorAll('table#' + table_id + ' tr');
 

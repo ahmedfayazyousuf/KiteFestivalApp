@@ -376,6 +376,31 @@ const AdminLogin = () =>{
         });
         console.log(allDocs);
 
+        setInterval(()=>{
+            setAllDocs([])
+            firebase.firestore().collection("Users").get().then((snapshot) => {
+                if(snapshot.docs.length>0){
+                    snapshot.docs.forEach((doc)=>{
+                        var data = doc.data()
+    
+                        if(data.Status === 'Attended'){
+                            setAt(prev => prev+1)
+                        }
+    
+                        if(data.KiteStatus === 'Returned'){
+                            setRt(prev => prev+1)
+                        }
+                        data.id = doc.id
+                        setAllDocs((prev)=>{
+                            return[...prev,data];
+                        });
+                    });
+                }   
+            });
+
+            console.log(allDocs);
+        },3000)
+
         // document.getElementsByClassName("Yes").style.display = "none";
     },[]);
 

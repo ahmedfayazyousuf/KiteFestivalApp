@@ -118,6 +118,10 @@ const Registration = () =>{
 
                 if(select === "Yes"){
                     var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
+                    if(time === '10:30' || time === '11:30'){
+                        timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} AM`)
+                    }
+
                     timeslot.get().then(async (doc)=>{
                         console.log(doc.data())
                         var data = doc.data() 
@@ -149,6 +153,9 @@ const Registration = () =>{
                     })
                 }else{
                     var timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} PM`)
+                    if(time === '10:30' || time === '11:30'){
+                        timeslot = kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${time} AM`)
+                    }
                 timeslot.get().then(async (doc)=>{
                     console.log(doc.data())
                     var data = doc.data() 
@@ -172,6 +179,11 @@ const Registration = () =>{
 
                 if(select === "Yes"){
                     var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
+
+                    if(time === '11'){
+                        timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 AM`)
+                    }
+
                     timeslot.get().then(async (doc)=>{
                         console.log(doc.data())
                         var data = doc.data() 
@@ -206,6 +218,9 @@ const Registration = () =>{
 
                 else{
                     var timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 PM`)
+                    if(time === '11'){
+                        timeslot = kites.collection("Areas").doc("Area2").collection('timeslots').doc(`${time}:00 AM`)
+                    }
                 timeslot.get().then(async (doc)=>{
                     console.log(doc.data())
                     var data = doc.data() 

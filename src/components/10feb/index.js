@@ -24,6 +24,7 @@ const TimeSlot = () => {
     kites.collection("Areas").doc("Area1").collection('timeslots').get().then((querySnapshot) => {
         var count = 0;
     querySnapshot.forEach((doc) => {
+        console.log(doc.id)
         kites.collection("Areas").doc("Area1").collection('timeslots').doc(`${doc.id}`).get().then((doc2)=>{
             var time=doc.id.slice(0,-3)
             console.log(time)
@@ -86,7 +87,7 @@ const TimeSlot = () => {
         kites.style.color = 'white'
         console.log(user)
         console.log()
-        if(e === 'areaone12:30'){
+        if(e === 'areatwo12'){
             document.getElementById(e).style.background = "#54B2E9"; 
             document.getElementById(e).style.color = "white";
             document.getElementById('areaone1:30').style.background = "transparent";
@@ -94,9 +95,13 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -109,9 +114,13 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -124,8 +133,12 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -138,8 +151,345 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
+            
+            document.getElementById('areatwo3k').style.color = "black";
+            document.getElementById('areatwo4k').style.color = "black";
+            document.getElementById('areatwo5k').style.color = "black";
+            document.getElementById('areatwo6k').style.color = "black";
+            document.getElementById('areatwo7k').style.color = "black";
+
+            setTime('areatwo12');
+        }
+
+        if(e === 'areatwo11'){
+            document.getElementById(e).style.background = "#54B2E9"; 
+            document.getElementById(e).style.color = "white";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            
+
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone12:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
+            document.getElementById('areaone1:30k').style.color = "black";
+            document.getElementById('areaone2:30k').style.color = "black";
+            document.getElementById('areaone3:30k').style.color = "black";
+            document.getElementById('areaone4:30k').style.color = "black";
+            document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
+
+            document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+
+            
+            document.getElementById('areatwo3s').style.color = "black";
+            document.getElementById('areatwo4s').style.color = "black";
+            document.getElementById('areatwo5s').style.color = "black";
+            document.getElementById('areatwo6s').style.color = "black";
+            document.getElementById('areatwo7s').style.color = "black";
+
+            document.getElementById('areaone1:30s').style.color = "black";
+            document.getElementById('areaone2:30s').style.color = "black";
+            document.getElementById('areaone3:30s').style.color = "black";
+            document.getElementById('areaone4:30s').style.color = "black";
+            document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
+
+            document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+        
+            
+            document.getElementById('areatwo3k').style.color = "black";
+            document.getElementById('areatwo4k').style.color = "black";
+            document.getElementById('areatwo5k').style.color = "black";
+            document.getElementById('areatwo6k').style.color = "black";
+            document.getElementById('areatwo7k').style.color = "black";
+
+            setTime('areatwo11');
+        }
+
+        if(e === 'areaone10:30'){
+            document.getElementById(e).style.background = "#54B2E9"; 
+            document.getElementById(e).style.color = "white";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            
+            
+
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
+            
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone12:30').style.color = "black";
+
+            
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
+            
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
+            document.getElementById('areaone1:30k').style.color = "black";
+            document.getElementById('areaone2:30k').style.color = "black";
+            document.getElementById('areaone3:30k').style.color = "black";
+            document.getElementById('areaone4:30k').style.color = "black";
+            document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
+
+
+            document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
+            
+            document.getElementById('areatwo3s').style.color = "black";
+            document.getElementById('areatwo4s').style.color = "black";
+            document.getElementById('areatwo5s').style.color = "black";
+            document.getElementById('areatwo6s').style.color = "black";
+            document.getElementById('areatwo7s').style.color = "black";
+
+            document.getElementById('areaone1:30s').style.color = "black";
+            document.getElementById('areaone2:30s').style.color = "black";
+            document.getElementById('areaone3:30s').style.color = "black";
+            document.getElementById('areaone4:30s').style.color = "black";
+            document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
+
+
+            document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
+            
+            document.getElementById('areatwo3k').style.color = "black";
+            document.getElementById('areatwo4k').style.color = "black";
+            document.getElementById('areatwo5k').style.color = "black";
+            document.getElementById('areatwo6k').style.color = "black";
+            document.getElementById('areatwo7k').style.color = "black";
+
+            setTime('areaone10:30');
+        }
+
+        if(e === 'areaone11:30'){
+            document.getElementById(e).style.background = "#54B2E9"; 
+            document.getElementById(e).style.color = "white";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            
+
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
+            
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone12:30').style.color = "black";
+        
+            
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
+            
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
+            document.getElementById('areaone1:30k').style.color = "black";
+            document.getElementById('areaone2:30k').style.color = "black";
+            document.getElementById('areaone3:30k').style.color = "black";
+            document.getElementById('areaone4:30k').style.color = "black";
+            document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
+
+            document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
+            
+            document.getElementById('areatwo3s').style.color = "black";
+            document.getElementById('areatwo4s').style.color = "black";
+            document.getElementById('areatwo5s').style.color = "black";
+            document.getElementById('areatwo6s').style.color = "black";
+            document.getElementById('areatwo7s').style.color = "black";
+
+            document.getElementById('areaone1:30s').style.color = "black";
+            document.getElementById('areaone2:30s').style.color = "black";
+            document.getElementById('areaone3:30s').style.color = "black";
+            document.getElementById('areaone4:30s').style.color = "black";
+            document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
+
+            document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
+            
+            document.getElementById('areatwo3k').style.color = "black";
+            document.getElementById('areatwo4k').style.color = "black";
+            document.getElementById('areatwo5k').style.color = "black";
+            document.getElementById('areatwo6k').style.color = "black";
+            document.getElementById('areatwo7k').style.color = "black";
+
+            setTime('areaone11:30');
+        }
+
+
+
+        if(e === 'areaone12:30'){
+            document.getElementById(e).style.background = "#54B2E9"; 
+            document.getElementById(e).style.color = "white";
+            document.getElementById('areaone1:30').style.background = "transparent";
+            document.getElementById('areaone2:30').style.background = "transparent";
+            document.getElementById('areaone3:30').style.background = "transparent";
+            document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+
+            
+
+            document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
+            
+            document.getElementById('areatwo3').style.background = "transparent";
+            document.getElementById('areatwo4').style.background = "transparent";
+            document.getElementById('areatwo5').style.background = "transparent";
+            document.getElementById('areatwo6').style.background = "transparent";
+            document.getElementById('areatwo7').style.background = "transparent";
+
+            document.getElementById('areaone1:30').style.color = "black";
+            document.getElementById('areaone2:30').style.color = "black";
+            document.getElementById('areaone3:30').style.color = "black";
+            document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            
+
+            document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
+            
+            document.getElementById('areatwo3').style.color = "black";
+            document.getElementById('areatwo4').style.color = "black";
+            document.getElementById('areatwo5').style.color = "black";
+            document.getElementById('areatwo6').style.color = "black";
+            document.getElementById('areatwo7').style.color = "black";
+
+            document.getElementById('areaone1:30k').style.color = "black";
+            document.getElementById('areaone2:30k').style.color = "black";
+            document.getElementById('areaone3:30k').style.color = "black";
+            document.getElementById('areaone4:30k').style.color = "black";
+            document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+
+
+            document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
+            
+            document.getElementById('areatwo3s').style.color = "black";
+            document.getElementById('areatwo4s').style.color = "black";
+            document.getElementById('areatwo5s').style.color = "black";
+            document.getElementById('areatwo6s').style.color = "black";
+            document.getElementById('areatwo7s').style.color = "black";
+
+            document.getElementById('areaone1:30s').style.color = "black";
+            document.getElementById('areaone2:30s').style.color = "black";
+            document.getElementById('areaone3:30s').style.color = "black";
+            document.getElementById('areaone4:30s').style.color = "black";
+            document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+     
+
+            document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -157,9 +507,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -172,9 +527,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -188,9 +548,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -203,9 +568,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -223,9 +593,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -238,9 +613,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -253,9 +633,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -268,9 +653,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -288,9 +678,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -303,9 +698,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -318,9 +718,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -334,9 +739,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -354,9 +764,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.background = "transparent";
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -369,9 +784,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.color = "black";
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -384,9 +804,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30k').style.color = "black";
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -400,9 +825,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30s').style.color = "black";
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -420,9 +850,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.background = "transparent";
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -435,9 +870,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30').style.color = "black";
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -450,9 +890,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30k').style.color = "black";
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -466,9 +911,14 @@ const TimeSlot = () => {
             document.getElementById('areaone2:30s').style.color = "black";
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -487,6 +937,12 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
+
+            document.getElementById('areatwo11').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
             
 
             
@@ -502,6 +958,12 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+
+            document.getElementById('areatwo11').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
             
 
             
@@ -518,6 +980,12 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
+
+            document.getElementById('areatwo11k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
             
 
             
@@ -534,6 +1002,12 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
+
+            document.getElementById('areatwo11s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
             
 
             
@@ -554,9 +1028,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo4').style.background = "transparent";
             document.getElementById('areatwo5').style.background = "transparent";
@@ -569,9 +1048,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo4').style.color = "black";
             document.getElementById('areatwo5').style.color = "black";
@@ -585,9 +1069,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo4k').style.color = "black";
             document.getElementById('areatwo5k').style.color = "black";
@@ -600,9 +1089,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo4s').style.color = "black";
             document.getElementById('areatwo5s').style.color = "black";
@@ -620,9 +1114,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo5').style.background = "transparent";
@@ -635,9 +1134,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo5').style.color = "black";
@@ -650,9 +1154,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo5k').style.color = "black";
@@ -665,9 +1174,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo5s').style.color = "black";
@@ -685,9 +1199,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -700,9 +1219,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -716,9 +1240,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -731,9 +1260,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -751,9 +1285,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -766,9 +1305,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -781,9 +1325,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -796,9 +1345,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -816,9 +1370,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.background = "transparent";
             document.getElementById('areaone4:30').style.background = "transparent";
             document.getElementById('areaone5:30').style.background = "transparent";
+            document.getElementById('areaone11:30').style.background = "transparent";
+            document.getElementById('areaone10:30').style.background = "transparent";
+            document.getElementById('areaone12:30').style.background = "transparent";
             
 
             document.getElementById('areatwo1').style.background = "transparent";
+            document.getElementById('areatwo12').style.background = "transparent";
+            document.getElementById('areatwo11').style.background = "transparent";
             
             document.getElementById('areatwo3').style.background = "transparent";
             document.getElementById('areatwo4').style.background = "transparent";
@@ -831,9 +1390,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30').style.color = "black";
             document.getElementById('areaone4:30').style.color = "black";
             document.getElementById('areaone5:30').style.color = "black";
+            document.getElementById('areaone11:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
+            document.getElementById('areaone10:30').style.color = "black";
             
 
             document.getElementById('areatwo1').style.color = "black";
+            document.getElementById('areatwo12').style.color = "black";
+            document.getElementById('areatwo11').style.color = "black";
             
             document.getElementById('areatwo3').style.color = "black";
             document.getElementById('areatwo4').style.color = "black";
@@ -847,9 +1411,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30k').style.color = "black";
             document.getElementById('areaone4:30k').style.color = "black";
             document.getElementById('areaone5:30k').style.color = "black";
+            document.getElementById('areaone11:30k').style.color = "black";
+            document.getElementById('areaone10:30k').style.color = "black";
+            document.getElementById('areaone12:30k').style.color = "black";
             
 
             document.getElementById('areatwo1k').style.color = "black";
+            document.getElementById('areatwo12k').style.color = "black";
+            document.getElementById('areatwo11k').style.color = "black";
             
             document.getElementById('areatwo3k').style.color = "black";
             document.getElementById('areatwo4k').style.color = "black";
@@ -863,9 +1432,14 @@ const TimeSlot = () => {
             document.getElementById('areaone3:30s').style.color = "black";
             document.getElementById('areaone4:30s').style.color = "black";
             document.getElementById('areaone5:30s').style.color = "black";
+            document.getElementById('areaone11:30s').style.color = "black";
+            document.getElementById('areaone10:30s').style.color = "black";
+            document.getElementById('areaone12:30s').style.color = "black";
             
 
             document.getElementById('areatwo1s').style.color = "black";
+            document.getElementById('areatwo12s').style.color = "black";
+            document.getElementById('areatwo11s').style.color = "black";
             
             document.getElementById('areatwo3s').style.color = "black";
             document.getElementById('areatwo4s').style.color = "black";
@@ -889,6 +1463,26 @@ const TimeSlot = () => {
                 </div>
                 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button  id="areaone10:30"  onClick={() => {Handleclick("areaone10:30")}} value="10:30 AM - 11:30 AM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
+                                10:30 AM
+                                <p id="areaone10:30k" style={{color: '#BAB4B4', fontSize: '10px'}}><em >x kites available</em></p>
+                                <p id="areaone10:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div> 
+
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button  id="areaone11:30"  onClick={() => {Handleclick("areaone11:30")}} value="11:30 AM - 12:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
+                                11:30 AM
+                                <p id="areaone11:30k" style={{color: '#BAB4B4', fontSize: '10px'}}><em >x kites available</em></p>
+                                <p id="areaone11:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div> 
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
@@ -909,7 +1503,13 @@ const TimeSlot = () => {
                             </button>
                         </div>
                     </div>
-                    
+ 
+
+                </div>
+
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areaone2:30" onClick={() => {Handleclick("areaone2:30")}} value="2:30 PM - 3:30 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
@@ -918,14 +1518,7 @@ const TimeSlot = () => {
                                 <p id="areaone2:30s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
                             </button>
                         </div> 
-                    </div>                  
-                    
-                     
-
-                </div>
-
-
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+                    </div>  
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
@@ -974,6 +1567,26 @@ const TimeSlot = () => {
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo11" onClick={() => {Handleclick("areatwo11")}} value="11 AM - 12 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
+                                11:00 AM
+                                <p id="areatwo11k" style={{color: '#BAB4B4', fontSize: '10px'}}><em >x kites available</em></p>
+                                <p id="areatwo11s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>    
+
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                        <div className="content content-1" style={{padding: '0', margin: '10px'}}>
+                            <button id="areatwo12" onClick={() => {Handleclick("areatwo12")}} value="12 PM - 1 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
+                                12:00 PM
+                                <p id="areatwo12k" style={{color: '#BAB4B4', fontSize: '10px'}}><em >x kites available</em></p>
+                                <p id="areatwo12s" style={{color: '#BAB4B4', fontSize: '10px'}}><em>x slots available</em></p>
+                            </button>
+                        </div> 
+                    </div>    
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
@@ -1005,7 +1618,13 @@ const TimeSlot = () => {
                         </div>
                     </div>                  
    
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
+                    
+
+                </div>
+
+                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
+
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>
                             <button id="areatwo4" onClick={() => {Handleclick("areatwo4")}} value="4 PM - 5 PM" style={{width:"150px", padding: '10px', color: 'black', backgroundColor: 'transparent', border: 'none', fontSize: '20px', fontWeight: '500',borderRadius: "10px"}}>
                                 4:00 PM
@@ -1014,10 +1633,6 @@ const TimeSlot = () => {
                             </button>
                         </div>
                     </div>  
-
-                </div>
-
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems:'center', width: '70%'}} id='slotparent'>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', padding: '0', margin: '0'}}>
                         <div className="content content-1" style={{padding: '0', margin: '10px'}}>

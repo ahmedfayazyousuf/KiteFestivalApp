@@ -377,37 +377,6 @@ const AdminLogin = () =>{
         });
         console.log(allDocs);
 
-        firebase.firestore().collection("Users").onSnapshot(function(doc) {
-            // var cities = [];
-            // querySnapshot.forEach(function(doc) {
-            //     cities.push(doc.data().name);
-            // });
-
-            setAllDocs([])
-            setAt(0)
-            setRt(0)
-
-            doc.forEach((docs)=>{
-                var data = docs.data()
-
-                if(data.Status === 'Attended'){
-                    setAt(prev => prev+1)
-                }
-
-                if(data.KiteStatus === 'Returned'){
-                    setRt(prev => prev+1)
-                }
-                data.id = doc.id
-                setAllDocs((prev)=>{
-                    return[...prev,data];
-                });
-
-            })
-
-
-            console.log('new doc')
-            
-          });
 
         // setInterval(()=>{
         //     setAllDocs([])

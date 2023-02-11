@@ -39,7 +39,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -63,7 +63,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -87,7 +87,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -111,7 +111,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -144,16 +144,19 @@ const AdminLogin = () =>{
                 divsToHide[i].style.display = "table-row"; // depending on what you're doing
                 var attended = divsToHide[i].childNodes[2].innerHTML
                 var returned = divsToHide[i].childNodes[3].innerHTML
-
+                console.log(returned)
+                console.log(attended)
                 if(attended === 'Attended'){
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
 
             }
+
+            console.log(counta)
 
             document.getElementById(`at`).innerHTML = `ATTENDANCE (count = ${counta})`
             document.getElementById(`rt`).innerHTML = `KITE STATUS (count = ${countr})`
@@ -176,7 +179,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -200,7 +203,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -225,7 +228,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
                 
@@ -264,7 +267,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -290,7 +293,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -315,7 +318,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -340,7 +343,7 @@ const AdminLogin = () =>{
                     counta = counta +1
                 }
 
-                if(returned === 'Returned'){
+                if(returned === 'Returned '){
                     countr = countr + 1
                 }
             }
@@ -365,7 +368,7 @@ const AdminLogin = () =>{
                         setAt(prev => prev+1)
                     }
 
-                    if(data.KiteStatus === 'Returned'){
+                    if(data.KiteStatus === 'Returned '){
                         setRt(prev => prev+1)
                     }
                     data.id = doc.id
@@ -376,6 +379,7 @@ const AdminLogin = () =>{
             }   
         });
         console.log(allDocs);
+
 
 
         // setInterval(()=>{

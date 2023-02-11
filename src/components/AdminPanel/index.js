@@ -378,7 +378,8 @@ const AdminLogin = () =>{
                 });
             }   
         });
-        console.log(allDocs);
+
+        
 
 
 
@@ -524,6 +525,10 @@ function download(table_id, separator = ',') {
 
                 <select name="time" id="time" type="text" required onChange={()=>{timefilter()}} style={{border: 'none', backgroundColor: 'rgb(150, 216, 255)', cursor: 'grab', borderRadius: '10px', width: '15vw', height: '4vh', marginRight: '20px', padding: '5px'}}>
                     <option selected disabled value="">TIME</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="11">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12">12:00 PM</option>
                     <option value="12:30">12:30 PM</option>
                     <option value="1">1:00 PM</option>
                     <option value="1:30">1:30 PM</option>
